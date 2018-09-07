@@ -8,7 +8,7 @@ Before configuring acceleration services, you must create a Global Acceleration 
 
 ## Add an EIP {#section_cfb_jvy_5db .section}
 
-No public IP is provided for shared-bandwidth instances. You must add an EIP to it to accelerate the Internet access. For more information, see [Add an EIP](intl.en-US/User Guide/Shared-bandwidth instances/Add an EIP.md#).
+No public IP is provided for shared-bandwidth instances. You must add an EIP to it to accelerate the Internet access. For more information, see [EN-US\_TP\_21106.md\#](intl.en-US/User Guide/Shared-bandwidth instances/Add an EIP.md#).
 
 ## Bind a backend service {#section_pyj_cly_5db .section}
 
