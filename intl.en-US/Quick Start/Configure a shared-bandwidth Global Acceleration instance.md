@@ -26,12 +26,12 @@ To meet the demand for acceleration, a Global Acceleration instance with the fol
 
     The region where the backend service is deployed. Beijing belongs to the service area of Mainland China.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/12632/15363110381372_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/12632/15365453251372_en-US.png)
 
 
 ## Prerequisites {#section_rzl_nxw_5db .section}
 
--   -   An application is deployed on the ECS instance and a secondary ENI is created for the ECS instance.
+-   An application is deployed on the ECS instance and a secondary ENI is created for the ECS instance.
 
 
 ## Step 1. Create a Global Acceleration instance {#section_scl_pxw_5db .section}
@@ -126,18 +126,18 @@ Follow these steps to bind a backend service:
 
 1.  On the Global Acceleration page, find the target instance and click the added EIP.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/12644/15363110381430_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/12644/15365453251430_en-US.png)
 
 2.  On the Global Acceleration IP Addresses page, click the **Bind** option of the target EIP.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/12644/15363110386956_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/12644/15365453256956_en-US.png)
 
 3.  In the displayed dialog box, configure the backend service according to the following information:
     -   **Region**: Select the region of the backend service. In this tutorial, select **China North 2**.
     -   **Instance Type**: Select the type of the instance. Shared-bandwidth Global Acceleration instances support binding ECS ENIs and SLB instances of the VPC network. In this tutorial, select **Secondary ENI**.
     -   **Bind Instance**: Select the instance to bind. In this tutorial, select the created ECS ENI.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/12644/15363110381447_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/12644/15365453251447_en-US.png)
 
 
 ## Step 4. Verification {#section_hqp_ndx_5db .section}
