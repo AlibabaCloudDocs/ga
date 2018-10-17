@@ -12,7 +12,7 @@ To meet the demand for acceleration, a Global Acceleration instance with the fol
 
 -   Instance type: dedicated bandwidth
 
-    For more information, see [Instance type](../../../../intl.en-US/User Guide/Instance type.md#).
+    For more information, see [Instance types](../../../../reseller.en-US/User Guide/Instance types.md#).
 
 -   Accelerated area: North America
 
@@ -26,18 +26,18 @@ To meet the demand for acceleration, a Global Acceleration instance with the fol
 
     The region where the backend service is deployed. Beijing belongs to the service area of Mainland China.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/12632/15344224561372_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/12632/15397454511372_en-US.png)
 
 
 ## Step 1. Create a Global Acceleration instance {#section_scl_pxw_5db .section}
 
-1.  Log on to the [VPC console](https://vpcnext.console.aliyun.com) .
+1.  Log on to the [VPC console](https://partners-intl.console.aliyun.com/#/vpc) .
 2.  In the left-side navigation pane, click **Global Acceleration**.
 3.  Click **Dedicated Bandwidth**, and then click **Create Instance**.
 4.  Configure the Global Acceleration instance according to the following information, and then click **Buy Now**.
 
-    |Configuration|说明|
-    |:------------|:-|
+    |Configuration|Description|
+    |:------------|:----------|
     |**Bandwidth Type**| Select the bandwidth type:
 
     -   **Dedicated Bandwidth**: A dedicated-bandwidth Global Acceleration instance provides a dedicated Internet bandwidth and a public IP for accelerating the Internet access for the added backend service.
@@ -50,7 +50,7 @@ You can add one or more Elastic IP Addresses \(EIPs\) to a shared-bandwidth inst
 
 The regions of the backend services that the EIPs are bound to must be the same.
 
- In this tutorial, select **Dedicated Bandwidth**. For more information, see [Instance type](../../../../intl.en-US/User Guide/Instance type.md#).
+ In this tutorial, select **Dedicated Bandwidth**. For more information, see [Instance types](../../../../reseller.en-US/User Guide/Instance types.md#).
 
  |
     |**Accelerated Area**| Select the accelerated area of the Global Acceleration instance.
@@ -114,7 +114,7 @@ After a dedicated-bandwidth instance is created, you need to bind the backend se
 
 When the status of the Global Acceleration instance changes to **Allocated**, the binding is successful. After the instance is successfully bound, the system automatically allocates a backend service address to the backend server.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/12632/15344224571391_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/12632/15397454511391_en-US.png)
 
 ## Step 3. Activate the backend service {#section_e2b_xcx_5db .section}
 
@@ -128,7 +128,7 @@ This tutorial takes the Linux system as an example:
 
     You can also click **Service Activation** to view the backend service address.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/12632/15344224571392_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/12632/15397454511392_en-US.png)
 
 2.  Run the following command to open the NIC configuration file.
 
