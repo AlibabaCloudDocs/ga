@@ -6,7 +6,7 @@ Before using Global Acceleration, you must buy and create a Global Acceleration 
 
 Currently, Global Acceleration only supports accelerating the access to applications deployed in ECS instances and SLB instances of the VPC network.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/12626/15383017071354_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/12626/15427156071354_en-US.png)
 
 ## Accelerated Area {#section_aw5_pnw_5db .section}
 
@@ -16,7 +16,7 @@ Each accelerated area contains one or more Alibaba Cloud regions, as shown in th
 
 **Note:** If you want to select Asia and Europe as the accelerated area, contact your customer manager.
 
-For example, if you want to accelerate the Internet access to your service for users in North America, then select North America as the accelerated area when you create a Global Acceleration instance. A public IP is allocated to the Global Acceleration instance in the selected region for users in North America to access your service. A public IP is allocated to the Global Acceleration instance in the selected region for North America users to access your service.
+For example, if you want to accelerate the Internet access to your service for users in North America, then select North America as the accelerated area when you create a Global Acceleration instance. A public IP is allocated to the Global Acceleration instance in the selected region for users in North America to access your service.
 
 |Accelerated area|Included regions|
 |:---------------|:---------------|
