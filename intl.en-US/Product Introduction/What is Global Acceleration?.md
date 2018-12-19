@@ -6,7 +6,7 @@ Before using Global Acceleration, you must buy and create a Global Acceleration 
 
 Currently, Global Acceleration only supports accelerating the access to applications deployed in ECS instances and SLB instances of the VPC network.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/12626/15427156071354_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/12626/15452160861354_en-US.png)
 
 ## Accelerated Area {#section_aw5_pnw_5db .section}
 
@@ -28,6 +28,8 @@ For example, if you want to accelerate the Internet access to your service for u
 
  China \(Hangzhou\)
 
+ China \(Hohhot\)
+
  China East 2 \(Shanghai\)
 
  China \(Shenzhen\)
@@ -45,7 +47,13 @@ For example, if you want to accelerate the Internet access to your service for u
  US \(Virginia\)
 
  |
-|Europe|Germany \(Frankfurt\)|
+|Europe| Germany \(Frankfurt\)
+
+ UK \(London\)
+
+ |
+|Australia|Australia \(Sydney\)|
+|Middle East|UAE \(Dubai\)|
 
 ## Service Area {#section_upj_d4w_5db .section}
 
@@ -55,8 +63,8 @@ A service area is a collection of Alibaba Cloud regions. Each service area conta
 
 For example, if the website to have accelerated access is deployed in an ECS instance in China \(Beijing\), then select China Mainland as the service area when you create a Global Acceleration instance.
 
-|Service area|Included regions|
-|:-----------|:---------------|
+|Accelerated area|Included regions|
+|:---------------|:---------------|
 |Mainland China| China \(Qingdao\) 
 
  China \(Beijing\)  
@@ -64,6 +72,8 @@ For example, if the website to have accelerated access is deployed in an ECS ins
  China \(Zhangjiakou\)
 
  China \(Hangzhou\)
+
+ China \(Hohhot\)
 
  China East 2 \(Shanghai\)
 
@@ -82,7 +92,13 @@ For example, if the website to have accelerated access is deployed in an ECS ins
  US \(Virginia\)
 
  |
-|Europe|Germany \(Frankfurt\)|
+|Europe| Germany \(Frankfurt\)
+
+ UK \(London\)
+
+ |
+|Australia|Australia \(Sydney\)|
+|Middle East|UAE \(Dubai\)|
 
 ## Backend service {#section_z33_d4w_5db .section}
 
