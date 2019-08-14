@@ -6,7 +6,7 @@ Before using Global Acceleration, you must buy and create a Global Acceleration 
 
 Currently, Global Acceleration only supports accelerating the access to applications deployed in ECS instances and SLB instances of the VPC network.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/12626/15452160861354_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/12626/15657994321354_en-US.png)
 
 ## Accelerated Area {#section_aw5_pnw_5db .section}
 
