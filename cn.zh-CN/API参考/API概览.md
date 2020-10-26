@@ -9,6 +9,8 @@
 |[DescribeAccelerator](/cn.zh-CN/API参考/全球加速实例/DescribeAccelerator.md)|查询指定的全球加速实例信息。|
 |[ListAccelerators](/cn.zh-CN/API参考/全球加速实例/ListAccelerators.md)|查询全球加速实例列表。|
 |[UpdateAccelerator](/cn.zh-CN/API参考/全球加速实例/UpdateAccelerator.md)|修改全球加速实例。|
+|[AttachDdosToAccelerator](/cn.zh-CN/API参考/全球加速实例/AttachDdosToAccelerator.md)|将DDoS高防实例与全球加速实例绑定。|
+|[DetachDdosFromAccelerator](/cn.zh-CN/API参考/全球加速实例/DetachDdosFromAccelerator.md)|将DDoS高防实例与全球加速实例解绑。|
 
 ## 带宽包
 
