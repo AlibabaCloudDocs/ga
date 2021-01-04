@@ -18,7 +18,7 @@ An acceleration area is a collection of Alibaba Cloud regions. Each acceleration
 |China Southwest|China \(Chengdu\)|
 |North America|US \(Silicon Valley\) and US \(Virginia\)|
 |Asia Pacific|China \(Hong Kong\), China \(Taiwan\), South Korea \(Seoul\), Singapore \(Singapore\), Malaysia \(Kuala Lumpur\), Japan \(Tokyo\), Indonesia \(Jakarta\), India \(Mumbai\), and Australia \(Sydney\)|
-|Europe|Germany \(Frankfurt\), UK \(London\), and Russia \(Moscow\)|
+|Europe|Germany \(Frankfurt\) and UK \(London\)|
 
 ## Accelerated IP addresses
 
