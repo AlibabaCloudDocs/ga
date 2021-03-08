@@ -2,7 +2,7 @@
 
 Global Accelerator \(GA\) supports only the subscription billing method. You must pay upfront fees to use subscription resources. The billing cycle is 30 days.
 
-**Note:** During the period from April 15, 2020 to April 1, 2021, if a first-time user uses an Alibaba Cloud account to purchase the GA service, a one-month free trial is provided. Note that this account must pass real-name verification as enterprise identities. Submit an application for a free trial.To apply for a free trial, visit the [GA Free Trial Application](https://page-intl.aliyun.com/form/act857014000/index.htm) page. For more information about the free trial and the instance types that support the free trial, see [GA free trials](/intl.en-US/Announcement/GA free trials.md).
+**Note:** During the period from April 15, 2020 to April 1, 2021, if a first-time user uses an Alibaba Cloud account to purchase the GA service, a one-month free trial is provided. Note that this account must pass real-name verification as enterprise identities. Submit an application for a free trial. To apply for a free trial, visit the [GA Free Trial Application](https://page-intl.aliyun.com/form/act857014000/index.htm) page. For more information about the free trial and the instance types that support the free trial, see [GA free trials](/intl.en-US/Announcement/GA free trials.md).
 
 ## Billing items
 
@@ -69,7 +69,7 @@ Bandwidth fee = Basic bandwidth plan fee + Cross-border bandwidth plan fee. The 
 
     **Note:** You can specify ECS or SLB as the backend service type only when your account is included in the whitelist of GA. If you want to specify ECS or SLB as the backend service type, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).
 
-    The unit price of the basic bandwidth plan varies based on bandwidth types. For more information about the pricing of basic bandwidth plans, visit the [buy page](https://common-buy-intl.aliyun.com/?commodityCode=ga_bwppreintl_public_intl#/buy).
+    The unit price of the basic bandwidth plan varies based on bandwidth types. For more information about the pricing of basic bandwidth plans, visit the [buypage](https://common-buy-intl.aliyun.com/?commodityCode=ga_bwppreintl_public_intl#/buy).
 
 -   Cross-border bandwidth plan
 
