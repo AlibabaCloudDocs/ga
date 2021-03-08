@@ -11,7 +11,6 @@ This topic lists the solutions that are provided by Alibaba Cloud to accelerate 
 |Integrate GA with security services|[Global Accelerator interacts with Anti-DDoS Pro to accelerate applications \(inline mode deployment\)](/intl.en-US/Best practices/Global Accelerator interacts with Anti-DDoS Pro to accelerate applications (inline mode deployment).md)|
 |[Global Accelerator interacts with Anti-DDoS Pro to accelerate applications \(tap mode deployment\)](/intl.en-US/Best practices/Global Accelerator interacts with Anti-DDoS Pro to accelerate applications (tap mode deployment).md)|
 |[Global Accelerator interacts with Web Application Firewall \(WAF\) to accelerate applications](/intl.en-US/Best practices/Global Accelerator interacts with Web Application Firewall (WAF) to accelerate applications.md)|
-|Accelerate cross-border collaboration|[Global Accelerator interacts with local VPN gateways to accelerate cross-border collaboration]()|
 |Accelerate web services for multinational enterprises|[Cross-border website secure acceleration for domain names hosted outside China](/intl.en-US/Best practices/Cross-border website secure acceleration for domain names hosted outside China.md)|
 |[Cross-border website secure acceleration for domain names hosted in mainland China](/intl.en-US/Best practices/Cross-border website secure acceleration for domain names hosted in mainland China.md)|
 |[GA interacts with WAF and GTM to accelerate enterprise mailbox service](/intl.en-US/Best practices/GA interacts with WAF and GTM to accelerate enterprise mailbox service.md)|
