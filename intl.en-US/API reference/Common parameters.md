@@ -45,7 +45,7 @@ Sample responses
     <? xml version="1.0" encoding="utf-8"? > 
         <!-The root node of the result-->
         <Operation name+Response>
-            <!—Return request tag-->
+            <!-Return request tag-->
             <RequestId>4C467B38-3910-447D-87BC-AC049166F216</RequestId>
             <!-Return result data-->
         </Operation name+Response>
