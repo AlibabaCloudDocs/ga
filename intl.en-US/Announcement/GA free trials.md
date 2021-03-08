@@ -36,7 +36,7 @@ After the application is approved, the following provided services are free for 
 -   4Mbps
 -   5Mbps |
 
-The free trial duration for each account starts from the date when the service is activated. If you do not renew the service after the free trial ends, the service is automatically released. If you need to continue using the service, you can renew it. For more information, see[Renew a subscription GA instance](/intl.en-US/User Guide/Global Accelerator instances/Renew a subscription GA instance.md), [Renew a subscription basic bandwidth plan](/intl.en-US/User Guide/Basic bandwidth plans/Renew a subscription basic bandwidth plan.md), and [Renew a cross-border acceleration bandwidth plan](/intl.en-US/User Guide/Cross-border acceleration bandwidth plans/Renew a cross-border acceleration bandwidth plan.md).
+The free trial duration for each account starts from the date when the service is activated. If you do not renew the service after the free trial ends, the service is automatically released. If you need to continue using the service, you can renew it. For more information, see [Renew a subscription GA instance](/intl.en-US/User Guide/Global Accelerator instances/Renew a subscription GA instance.md), [Renew a subscription basic bandwidth plan](/intl.en-US/User Guide/Basic bandwidth plans/Renew a subscription basic bandwidth plan.md), and [Renew a cross-border acceleration bandwidth plan](/intl.en-US/User Guide/Cross-border acceleration bandwidth plans/Renew a cross-border acceleration bandwidth plan.md).
 
 ## Promotion terms
 
