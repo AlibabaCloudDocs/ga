@@ -9,7 +9,7 @@ After you create a Global Accelerator \(GA\) instance, you must configure listen
 -   A GA instance is created. For more information, see [Create a GA instance](/intl.en-US/User Guide/Global Accelerator instances/Create a GA instance.md).
 -   To configure HTTPS listeners, make sure that the following conditions are met:
     -   HTTPS listeners are available to only the accounts that are included in the whitelist. If you want to create HTTPS listeners but you are not included in the whitelist,[submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).
-    -   You have purchased an SSL certificate and have applied for the certificate. For more information, see[Select and purchase certificates](https://www.alibabacloud.com/help/zh/doc-detail/28542.htm?spm=a2c63.p38356.b99.28.34582356bpg5Lj) and[Apply for certificates](https://www.alibabacloud.com/help/zh/doc-detail/98574.htm?spm=a2c63.p38356.b99.31.401e1edbEf7oJN).
+    -   You have purchased an SSL certificate and have applied for the certificate. For more information, see [Select and purchase certificates](https://www.alibabacloud.com/help/zh/doc-detail/28542.htm?spm=a2c63.p38356.b99.28.34582356bpg5Lj) and [Apply for certificates](https://www.alibabacloud.com/help/zh/doc-detail/98574.htm?spm=a2c63.p38356.b99.31.401e1edbEf7oJN).
 
 ## Step 1: Configure the basic setting and protocol of a listener
 
@@ -80,7 +80,7 @@ To associate a listener with an endpoint group, you can specify the region to wh
     |**Region**|Select the region where you want to deploy the endpoint group.|
     |**Backend Service**|Select the region where you want to deploy backend servers.     -   **Alibaba Cloud**: specifies that backend servers are deployed on Alibaba Cloud.
     -   **Off Alibaba Cloud**: specifies that backend servers are not deployed on Alibaba Cloud. |
-    |**Reserve Client IP**|Enable or disable backend servers to reserve client IP addresses. After this feature is enabled, backend servers can obtain client IP addresses. For more information, see [Reserve client IP addresses](/intl.en-US/Deployment & Maintenance/Reserve client IP addresses.md).
+    |**Reserve Client IP**|Enable or disable backend servers to reserve client IP addresses. After this feature is enabled, backend servers can obtain client IP addresses. For more information, see [Preserve client IP addresses](/intl.en-US/Deployment & Maintenance/Preserve client IP addresses.md).
 
 **Note:** This feature is available to only the accounts that are included in the whitelist. To use this feature,[submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex). |
     |**Endpoint**|An endpoint is an origin server to which client requests are forwarded. Set the following parameters to configure an endpoint:     -   **Backend Service Type**: If you set Backend Service to Alibaba Cloud, you can select **Alibaba Cloud Public IP Address**, **ECS**, or **SLB**. If you set Backend Service to Off Alibaba Cloud, you can select **Custom IP Address** or **Custom Domain Name**.
