@@ -9,7 +9,6 @@ This topic describes how to use only one Global Accelerator \(GA\) instance to a
 Before you start, make sure that the following requirements are met:
 
 -   Your website has an Internet Content Provider \(ICP\) number. A website must obtain an ICP number before the website is allowed to provide services in mainland China. For more information, see [What is an ICP filing?]()
--   A Secure Sockets Layer \(SSL\) certificate is purchased and an application is submitted to apply for the SSL certificate. For more information, see [Purchase a certificate](/intl.en-US/Buy Certificates/Select and purchase certificates.md) and [Apply for a certificate]().
 -   You can create both HTTP and HTTPS listeners for GA if you are included in the whitelist.To apply to be added to the whitelist, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).
 
 The following scenario is used in this example. A company deployed two servers in the China \(Beijing\) region for its headquarters, and a web application is deployed on both servers. The web application provides Internal-facing services through two different domain names. Most employees of the company need to access the web application from the China \(Hangzhou\) region. They face the following challenges:
