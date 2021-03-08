@@ -11,7 +11,7 @@ The following scenario is used as an example. A multinational company has deploy
 
 You can deploy the GA service and configure HTTPS listeners. When clients in China \(Hong Kong\) send requests to the HTTP website that is deployed in US \(Silicon Valley\), you can use GA to accelerate the HTTPS traffic and encrypt data transmission.
 
-![Scenario](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/1747122061/p166508.png)
+![Scenario](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/1747122061/p166508.png)
 
 ## Prerequisites
 
@@ -19,42 +19,41 @@ Before you start, make sure the following requirements are met:
 
 -   An Alibaba Cloud account is created. If you do not have an Alibaba Cloud account, click [here](https://account.alibabacloud.com/register/intl_register.htm) to create one.
 -   Acceleration of HTTPS traffic is available to only the accounts that are added to the whitelist. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).
--   An SSL certificate is purchased and validated. For more information, see [Purchase a certificate](/intl.en-US/.md) and [Apply for a certificate]().
 
 ## Procedure
 
-![Procedure](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/1747122061/p166672.png)
+![Procedure](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/1747122061/p166672.png)
 
 ## Step 1: Enter the required information about the accelerated web service
 
-You can enter the required information about the accelerated web service in the GA console. The system recommends the GA instance and basic bandwidth plan to fit your service needs.
+You can enter the required information about the accelerated web service in the GA console. The system provides the recommended GA instance and basic bandwidth plan to meet your business requirements.
 
-To enter the required information about the accelerated web service, follow these steps:
+To enter the required information about the accelerated web service, perform the following steps:
 
 1.  Log on to the [Global Accelerator console](https://ga.console.aliyun.com/list).
 
-2.  On the**Instances**page, click**Purchase Guide**in the upper-right corner.
+2.  In the upper-right corner of the **Instances** page, click **Purchase Guide**.
 
-    **Note:** If this is your first time purchasing the GA service, skip this step.
+    **Note:** Skip the preceding step if you are a first-time user.
 
-    ![Purchase guide](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/2367958951/p103054.png)
+    ![Purchase Guide](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/2367958951/p103054.png)
 
-3.  In the**Enter the required information to generate a list of recommended services**section, enter the required information in the following fields:
+3.  In the **Enter the required information to generate a list of recommended services** section, enter the required information.
 
-    -   **Acceleration Area**: Select the region where users are located.**China \(Hong Kong\)**is selected in this example.
-    -   **Service Region**: Select the region where origin servers are located.**US \(Silicon Valley\)**is selected in this example.
-    -   **ICP Filing**: To accelerate a web service, specify whether you have applied for ICP filing. If the service to accelerate is not a web service, select**No**. In this example,**No**is selected.
+    -   **Acceleration Area**: Select the area that requires acceleration. Select **China \(Hong Kong\)** in this example.
+    -   **Service Region**: Select the region where the origin servers are located. **US \(Silicon Valley\)** is selected in this example.
+    -   **ICP Filing**: If you need to accelerate a web service, specify whether the domain name of the web service has applied for an Internet Content Provider \(ICP\) number. If the service is not a web service, select **No**. In this example, **No** is selected.
 
-        **Note:** Therefore, all websites must obtain an ICP number before they are permitted to operate in mainland China. For more information, see[What is an ICP filing]().
+        **Note:** All websites must obtain an ICP number before they are permitted to provide services to users in mainland China. For more information, see [What is an ICP filing?]().
 
-    -   **Server Area**: Specify whether the origin servers are deployed on Alibaba Cloud or in the environments outside Alibaba Cloud.**Off Alibaba Cloud**is selected in this example.
-    -   **Peak Bandwidth Range**: Enter the bandwidth required during peak hours. Unit: Mbit/s. The value is set to**10**in this example.
-    -   **Maximum Concurrent Connections**: Specify the maximum number of concurrent connections to the GA instance. If the number of existing concurrent connections reaches the upper limit, no extra connections are established. The value is set to**5 thousand**in this example.
-4.  Click**Generate Service List**.
+    -   **Server Area**: Specify whether the origin servers are deployed on Alibaba Cloud or in the environments outside Alibaba Cloud. **Off Alibaba Cloud** is selected in this example.
+    -   **Peak Bandwidth Range**: Enter the bandwidth required during peak hours. Unit: Mbit/s. The value is set to **10** in this example.
+    -   **Maximum Concurrent Connections**: Specify the maximum number of concurrent connections to the GA instance. If the number of existing concurrent connections reaches the upper limit, no extra connections are established. The value is set to **5 thousand** in this example.
+4.  Click **Generate Service List**.
 
-    You can check the list of recommended services in the Recommended Service List section.
+    After a list is generated, you can check the recommended services in the list.
 
-    ![Recommended service list](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/3707827951/p103000.png)
+    ![Recommended Service List](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3707827951/p103000.png)
 
 
 ## Step 2: Purchase a service bundle
@@ -65,7 +64,7 @@ To purchase a service bundle, perform the following steps:
 
 1.  Click **Generate Service List** at the bottom of the Recommended Service List section.
 
-    ![Purchase a GA service bundle](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/2367958951/p103007.png)
+    ![Purchase a GA service bundle](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/2367958951/p103007.png)
 
 2.  On the buy page, set the following parameters for the GA instance.
 
@@ -95,6 +94,9 @@ To purchase a service bundle, perform the following steps:
         |Basic bandwidth|Applications that are deployed on Alibaba Cloud|        -   Elastic Compute Service \(ECS\)
         -   Server Load Balancer \(SLB\)
         -   Alibaba Cloud public IP address
+
+**Note:** If ECS instances and SLB instances run in classic networks, both types of instances are not supported.
+
 |By default, networking within mainland China is accelerated.You can also purchase a cross-border bandwidth plan. This allows you to optimize the acceleration of networking between mainland China and other areas.|
         |Enhanced bandwidth|        -   Applications that are deployed on Alibaba Cloud
         -   Applications that are not deployed on Alibaba Cloud
@@ -111,7 +113,7 @@ To purchase a service bundle, perform the following steps:
         -   Alibaba Cloud public IP address
         -   Custom IP address
         -   Custom domain name
-|By default, network connections are accelerated on a global scale. Network traffic that is transmitted from mainland China to other areas is directed to the Hong Kong \(China\) region. Then, this traffic is forwarded to the global network.You can also purchase a cross-border bandwidth plan. This allows you to optimize the acceleration of network connections between mainland China and other areas.|
+|By default, network connections are accelerated on a global scale. Network traffic transmitted from mainland China to areas outside China is accelerated in the China \(Hong Kong\) region.If you also purchase a cross-border bandwidth plan, the acceleration of network connections between mainland China and areas outside China are reinforced.|
 
         **Note:** You can specify ECS or SLB as the backend service type only when your account is included in the whitelist of GA. If you want to specify ECS or SLB as the backend service type, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).
 
@@ -144,7 +146,7 @@ To add an acceleration area, perform the following steps:
 
 After the acceleration areas are added, GA assigns an accelerated IP address to each acceleration area to accelerate connections.
 
-![Add an acceleration area](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/6416911061/p166558.png)
+![Add an acceleration area](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6416911061/p166558.png)
 
 ## Step 4: Add a listener
 
@@ -163,7 +165,7 @@ To add a listener to the GA instance, perform the following steps:
     -   **Protocol**: Select a protocol for the listener. In this example, **HTTPS** is selected.
     -   **Port Number**: Enter a port number or port range. The specified ports receive requests and forward the requests to the endpoints. Valid values: 1 to 65499. In this example, the value is set to **443**.
     -   **Client Affinity**: Enable or disable client affinity. If client affinity is enabled, requests from a specific client IP address are routed to the same endpoint. The client IP address is regarded as the source IP address. In this example, **Source IP Address** is selected.
-    ![Configure the listener](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/7416911061/p166568.png)
+    ![Configure the listener](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7416911061/p166568.png)
 
 3.  Click **Next** to configure an SSL certificate.
 
@@ -178,7 +180,7 @@ To configure the SSL certificate, perform the following steps:
 
     -   **Server Certificate**: Select the SSL certificate that has been validated.
     -   **Backend Port**: Enter the port of the backend service. In this example, the value is set to **80**.
-    ![Configure an SSL certificate](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/2067122061/p166615.png)
+    ![Configure an SSL certificate](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/2067122061/p166615.png)
 
 2.  Click **Next** to configure an endpoint group.
 
@@ -214,7 +216,7 @@ To configure an endpoint group, perform the following steps:
 
             **Note:** If you set the weight of an endpoint to 0, GA stops distributing network traffic to the endpoint. Proceed with caution.
 
-    ![Configure an endpoint group](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/7416911061/p166636.png)
+    ![Configure an endpoint group](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7416911061/p166636.png)
 
 2.  Click **Next** to check the configurations. After you confirm the configurations, click **Next**.
 
@@ -235,7 +237,7 @@ To modify the DNS record, perform the following steps:
 
 4.  In the **Edit Record** pane, set **Type** to **CNAME** and set **Value** to the CNAME that is assigned to the GA instance in Step 2. For more information, see [Step 2: Purchase a service bundle](#section_6g9_632_9n4).
 
-    ![Modify the DNS record](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/7203177951/p135152.png)
+    ![Modify the DNS record](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7203177951/p135152.png)
 
 5.  Click **OK**.
 
@@ -250,7 +252,7 @@ To test how GA accelerates HTTPS traffic destined for the HTTP website that is d
 
     The test result shows that the website deployed in US \(Silicon Valley\) can be accessed over HTTPS.
 
-    ![Verify the settings](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/7416911061/p166658.png)
+    ![Verify the settings](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7416911061/p166658.png)
 
 3.  Open Command Prompt on the client that is located in China \(Hong Kong\).
 
