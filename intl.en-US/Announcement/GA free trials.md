@@ -17,7 +17,7 @@ The free trial promotion begins on April 15, 2020 and ends on April 1, 2021. Eac
 
 ## Participation method
 
-If you meet the applicant requirements, you can apply for a free trial. Submit an application for a free trial.To apply for a free trial, visit the [GA Free Trial Application](https://page-intl.aliyun.com/form/act857014000/index.htm) page.
+If you meet the applicant requirements, you can apply for a free trial. Submit an application for a free trial. To apply for a free trial, visit the [GA Free Trial Application](https://page-intl.aliyun.com/form/act857014000/index.htm) page.
 
 ## Promotion scope
 
