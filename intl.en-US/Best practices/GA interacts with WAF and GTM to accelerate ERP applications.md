@@ -20,7 +20,7 @@ GTM allows you to balance a large number of concurrent workloads, perform health
 
 To create a GTM instance, follow these steps:
 
-**Note:** If you are using GTM for the first time, you must authorize the GTM service to access your cloud resources. This allows GTM to access your alert groups that are created in CloudMonitor. For more information, see [Cloud resource access authorization](https://www.alibabacloud.com/help/doc-detail/87304.htm).
+**Note:** If you are using GTM for the first time, you must authorize the GTM service to access your cloud resources. This allows GTM to access your alert groups that are created in CloudMonitor. For more information, see [Authorize GTM to access cloud resources]().
 
 1.  Log on to the [Alibaba Cloud DNS console](https://dns.console.aliyun.com).
 
@@ -120,7 +120,7 @@ After you configure the access policy, you must specify the basic information of
 
         **Note:**
 
-        -   If you have not configured an alert group, log on to the CloudMonitor console and add an alert group. For more information, see [t6224.md\#](/intl.en-US/Alarm service/Alert contacts/Delete an alert contact or alert group.md).
+        -   If you have not configured an alert group, log on to the CloudMonitor console and add an alert group. For more information, see [Delete an alert contact or alert group](/intl.en-US/Alarm service/Alert contacts/Delete an alert contact or alert group.md).
         -   If you have configured an alert group but want to configure the basic information as a RAM user, you must log on with your Alibaba Cloud account and authorize the RAM user. After authorization, you can log on as a RAM user to retrieve the alert group information.
 2.  Click **Complete**.
 
