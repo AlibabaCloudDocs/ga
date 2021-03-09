@@ -225,7 +225,7 @@ Proxy Protocol的接收端必须在接收到完整有效的Proxy Protocol头部�
     }
     
     stream {
-        log_format tcp_basic '$proxy_protocol_addr - [$time_local] '  ##在`stream{}`模块的日志格式中中添加保存客户端源IP的变量proxy\_protocol\_addr。
+        log_format tcp_basic '$proxy_protocol_addr - [$time_local] '  ##在`stream{}`模块的日志格式中添加保存客户端源IP的变量proxy\_protocol\_addr。
                           '$protocol $status $bytes_sent $bytes_received '
                           '$session_time';
         upstream stream_backend {
