@@ -19,6 +19,7 @@ Before you start, make sure the following requirements are met:
 
 -   An Alibaba Cloud account is created. If you do not have an Alibaba Cloud account, click [here](https://account.alibabacloud.com/register/intl_register.htm) to create one.
 -   Acceleration of HTTPS traffic is available to only the accounts that are added to the whitelist. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).
+-   An SSL certificate is purchased and validated. For more information, see [Purchase a certificate](/intl.en-US/Buy Certificates/Select and purchase certificates.md) and [Apply for a certificate](/intl.en-US/Issue Certificates/Apply for a certificate.md).
 
 ## Procedure
 
