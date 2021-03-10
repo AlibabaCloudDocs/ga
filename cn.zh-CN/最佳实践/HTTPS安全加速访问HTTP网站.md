@@ -11,7 +11,7 @@
 
 您可以部署全球加速服务，并配置HTTPS协议监听，加速中国香港用户访问美国硅谷地域的HTTP网站，同时对客户端的访问请求进行HTTPS加密，有效保障数据传输的安全性。
 
-![业务场景图](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1199310061/p166508.png)
+![业务场景图](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1199310061/p166508.png)
 
 ## 前提条件
 
@@ -19,11 +19,11 @@
 
 -   您已经注册了阿里云账号。如未注册，请先完成[账号注册](https://account.aliyun.com/register/register.htm)。
 -   目前，HTTPS安全加速功能白名单开放。如需使用，请[提交工单](https://selfservice.console.aliyun.com/ticket/category/ga/today)。
--   您已经购买了SSL证书，并申请了该SSL证书。详细信息，请参见[证书选型与购买](/cn.zh-CN/.md)和[申请证书](/cn.zh-CN/证书申请和提交审核/申请和提交审核流程/概述.md)。
+-   您已经购买了SSL证书，并申请了该SSL证书。详细信息，请参见[证书选型与购买](/cn.zh-CN/证书购买/证书选型和购买.md)和[提交证书申请](/cn.zh-CN/证书申请/提交证书申请.md)。
 
 ## 配置步骤
 
-![配置步骤](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/8738510061/p166672.png)
+![配置步骤](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/8738510061/p166672.png)
 
 ## 步骤一：填写加速业务
 
@@ -37,7 +37,7 @@
 
     **说明：** 如果您是首次使用全球加速服务，请忽略该步骤。
 
-    ![购买向导](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/8472029951/p103054.png)
+    ![购买向导](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/8472029951/p103054.png)
 
 3.  在**智能推荐产品方案，选择以下与您业务相关的选项**区域，根据以下信息填写加速业务。
 
@@ -45,7 +45,7 @@
     -   **服务所在地域**：选择目标服务器所在的地域。本教程选择**美国（硅谷）**。
     -   **是否有ICP备案**：如果您的加速服务是Web服务，请选择是否有ICP备案。如果加速服务不是Web服务，请选择**无备案**。本教程选择**无备案**。
 
-        **说明：** 所有对中国内地（大陆）提供服务的网站都必须先进行ICP备案，才可开通服务。详细信息，请参见[什么是备案]()。
+        **说明：** 所有对中国内地（大陆）提供服务的网站都必须先进行ICP备案，才可开通服务。更多信息，请参见[什么是备案]()。
 
     -   **服务端部署在**：选择后端服务部署在阿里云还是非阿里云。本教程选择**非阿里云**。
     -   **峰值带宽的范围**：输入业务高峰期需要的带宽用量，单位是Mbps。本教程输入**10**。
@@ -54,7 +54,7 @@
 
     生成方案后，您可以查看系统根据您的加速业务智能推荐的加速方案。
 
-    ![智能推荐方案](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/4596827951/p103000.png)
+    ![智能推荐方案](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/4596827951/p103000.png)
 
 
 ## 步骤二：组合购买实例
@@ -65,7 +65,7 @@
 
 1.  单击**去组合购买**。
 
-    ![组合购买入口](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/8267958951/p103007.png)
+    ![组合购买入口](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/8267958951/p103007.png)
 
 2.  在购买页面，根据以下信息购买加速业务所需要的实例。
 
@@ -75,16 +75,16 @@
 
     -   **规格**：选择购买全球加速实例的规格。 本教程选择**小型Ⅰ**。
 
-        全球加速支持小型Ⅰ、小型Ⅱ、小型Ⅲ、中型Ⅰ、中型Ⅱ、中型Ⅲ六种规格，每种规格提供的加速服务如下。
+        全球加速支持小型Ⅰ、小型Ⅱ、小型Ⅲ、中型Ⅰ、中型Ⅱ、中型Ⅲ六种规格，每种规格提供的加速服务如下表所示。
 
         |规格|加速地域个数|最大带宽处理能力|最大并发连接数|
         |--|------|--------|-------|
-        |小型Ⅰ|1|20Mbps|5000|
-        |小型Ⅱ|2|40Mbps|10000|
-        |小型Ⅲ|3|60Mbps|15000|
-        |中型Ⅰ|5|100Mbps|25000|
-        |中型Ⅱ|8|160Mbps|40000|
-        |中型Ⅲ|10|200Mbps|50000|
+        |小型Ⅰ|1|20 Mbps|5000|
+        |小型Ⅱ|2|40 Mbps|10000|
+        |小型Ⅲ|3|60 Mbps|15000|
+        |中型Ⅰ|5|100 Mbps|25000|
+        |中型Ⅱ|8|160 Mbps|40000|
+        |中型Ⅲ|10|200 Mbps|50000|
 
     -   **带宽类型**：选择购买基础带宽包的带宽类型。本教程选择**精品加速带宽**。
 
@@ -95,6 +95,9 @@
         |标准加速带宽|阿里云上应用加速|        -   云服务器ECS
         -   负载均衡SLB
         -   阿里云公网IP
+
+**说明：** 不支持加速经典网络类型的ECS实例和经典网络类型的SLB实例。
+
 |默认加速中国内地区域|
         |增强加速带宽|        -   阿里云上应用加速
         -   阿里云下应用加速
@@ -113,7 +116,7 @@
         -   自定义域名
 |默认加速全球区域（中国内地到海外区域间的加速通过香港加速点上车）|
 
-        **说明：** 目前，将云服务器ECS和负载均衡SLB作为终端节点的功能白名单开放。如需使用，请[提交工单](https://selfservice.console.aliyun.com/ticket/category/ga/today)。
+        **说明：** 目前，将云服务器和负载均衡作为终端节点的功能白名单开放。如需使用，请[提交工单](https://selfservice.console.aliyun.com/ticket/category/ga/today)。
 
     -   **带宽峰值**：选择购买基础带宽包的带宽峰值。本教程选择**10Mb**。
 3.  单击**立即购买**并完成支付。
@@ -144,7 +147,7 @@
 
 加速区域添加成功后，全球加速会为接入地域分配一个加速IP，用来加速用户访问。
 
-![添加加速区域](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/4351510061/p166558.png)
+![添加加速区域](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/4351510061/p166558.png)
 
 ## 步骤四：添加监听
 
@@ -163,7 +166,7 @@
     -   **协议**：选择监听的协议类型。本教程选择**HTTPS**。
     -   **端口**：指定用来接收请求并向终端节点进行转发的监听端口，端口取值范围：1~65499。本教程输入**443**。
     -   **客户端亲和性**：选择是否保持客户端亲和性。保持客户端亲和性，即客户端访问有状态的应用程序时，可以将来自同一客户端的所有请求都定向到同一终端节点。本教程选择**源IP**。
-    ![配置监听](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1591510061/p166568.png)
+    ![配置监听](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1591510061/p166568.png)
 
 3.  单击**下一步**配置SSL证书。
 
@@ -178,7 +181,7 @@
 
     -   **选择服务器证书**：选择您已经申请的SSL证书。
     -   **后端端口**：输入后端服务器的服务端口。本教程输入**80**。
-    ![配置SSL证书](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/0936510061/p166615.png)
+    ![配置SSL证书](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0936510061/p166615.png)
 
 2.  单击**下一步**配置终端节点组。
 
@@ -214,7 +217,7 @@
 
             **说明：** 如果某个终端节点的权重设置为0，全球加速将终止向该终端节点分发流量，请您谨慎操作。
 
-    ![配置终端节点组](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1936510061/p166636.png)
+    ![配置终端节点组](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1936510061/p166636.png)
 
 2.  单击**下一步**审核配置，确认无误后，再单击**下一步**。
 
@@ -235,7 +238,7 @@
 
 4.  在**修改记录**对话框，选择**记录类型**为**CNAME**，并将**记录值**修改为步骤二组合购买实例后分配的CNAME地址。详细信息，请参见[步骤二：组合购买实例](#section_6g9_632_9n4)。
 
-    ![修改记录](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/9472029951/p135152.png)
+    ![修改记录](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9472029951/p135152.png)
 
 5.  单击**确认**。
 
@@ -250,7 +253,7 @@
 
     经测试，可以通过HTTPS方式访问部署在美国硅谷的HTTP网站。
 
-    ![访问测试](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/2857510061/p166658.png)
+    ![访问测试](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2857510061/p166658.png)
 
 3.  在接入地域（本教程为中国香港）的电脑中打开命令行窗口。
 
