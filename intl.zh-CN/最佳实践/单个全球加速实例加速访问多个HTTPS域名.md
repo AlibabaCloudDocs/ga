@@ -9,7 +9,7 @@ keyword: [多域名访问, HTTPS监听, 转发策略, 虚拟终端节点组, 加
 开始前，请确保满足以下条件：
 
 -   您的网站已经完成备案。所有对中国内地提供服务的网站都必须先进行ICP备案，才可开通服务。更多信息，请参见[什么是备案]()。
--   您已经购买了SSL证书，并申请了该SSL证书。更多信息，请参见[证书选型与购买](/intl.zh-CN/证书购买/证书选型和购买.md)和[申请证书]()。
+-   您已经购买了SSL证书，并申请了该SSL证书。更多信息，请参见[证书选型与购买](/intl.zh-CN/证书购买/证书选型和购买.md)和[提交证书申请](/intl.zh-CN/证书申请/提交证书申请.md)。
 -   目前，全球加速HTTP和HTTPS监听协议白名单开放，请[提交工单](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex)申请开通。
 
 本教程以下图场景为例。某公司的总部在北京地域，总部在阿里云上创建了两台服务器，两台服务器均部署了Web服务，并通过不同的域名对外提供服务。客户端主要分布在杭州地域，该公司的Web服务面临以下挑战：
@@ -119,7 +119,7 @@ keyword: [多域名访问, HTTPS监听, 转发策略, 虚拟终端节点组, 加
         -   自定义域名
 |默认加速全球区域（中国内地到海外区域间的加速通过香港加速点上车），选配跨域加速包后会进一步优化中国内地-海外间的网络加速效果|
 
-        **说明：** 目前，将云服务器ECS和负载均衡SLB作为终端节点的功能白名单开放。如需使用，请[提交工单](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex)。
+        **说明：** 目前，将云服务器和负载均衡作为终端节点的功能白名单开放。如需使用，请[提交工单](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex)。
 
     -   **带宽峰值**：选择购买基础带宽包的带宽峰值。本教程选择**10** Mb。
 3.  单击**立即购买**并完成支付。
