@@ -2,46 +2,46 @@
 
 This topic describes how to use Global Accelerator \(GA\) to accelerate connections to origin servers by using domain names of the servers.
 
-The following scenario is introduced as an example. A multinational company is headquartered in the US \(Silicon Valley\) region, where a web service is deployed on two origin servers on the premises. The web service can be accessed through the domain name www.example.com on port 80. When users from the office in the China \(Hong Kong\) region connect to the web service deployed in US \(Silicon Valley\) over the Internet, the network performance is unstable. The unstable network performance may cause issues such as latency, network jitters, and packet loss.
+The following scenario is used as an example. A company is headquartered in the US \(Silicon Valley\) region, where a web service is deployed on two origin servers on the premises. The web service can be accessed through the domain name www.example.com on port 80. When users from the office in the China \(Hong Kong\) region connect to the web service deployed in the US \(Silicon Valley\) region over the Internet, the network performance is unstable. The unstable network connection may cause issues such as latency, network jitter, and packet loss.
 
-To accelerate connections to the origin servers, you can create a GA instance that provides an access point in China \(Hong Kong\). When users in China \(Hong Kong\) send requests to the servers, the access point in China \(Hong Kong\) receives the requests and forwards the requests to the endpoints in US \(Silicon Valley\) through intelligent routing. GA can improve user experience of the web service.
+To accelerate connections to the origin servers, you can create a GA instance that provides an access point in the China \(Hong Kong\) region. When users in the China \(Hong Kong\) region send requests to the servers, the access point in the China \(Hong Kong\) region receives the requests and forwards the requests to the endpoints in the US \(Silicon Valley\) region through intelligent routing. Therefore, GA can improve user experience.
 
-![Accelerate transmission of network traffic destined for a specified domain name](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/1978035951/p103042.png)
+![Accelerate transmission of network traffic destined for a specified domain name](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/1978035951/p103042.png)
 
 ## Procedure
 
-![Configure web acceleration through a specified domain name](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/1978035951/p103045.png)
+![Procedure](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/1978035951/p103045.png)
 
-## Step 1: Enter the required information about the accelerated web service
+## Step 1: Enter the required information about the web service that you want to accelerate
 
 You can enter the required information about the accelerated web service in the GA console. The system provides the recommended GA instance and basic bandwidth plan to meet your business requirements.
 
-To enter the required information about the accelerated web service, perform the following steps:
+To enter the required information about the web service that you want to accelerate, perform the following steps:
 
 1.  Log on to the [Global Accelerator console](https://ga.console.aliyun.com/list).
 
 2.  In the upper-right corner of the **Instances** page, click **Purchase Guide**.
 
-    **Note:** Skip the preceding step if you are a first-time user.
+    **Note:** Skip the step if it is your first time using GA.
 
-    ![Purchase Guide](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/2367958951/p103054.png)
+    ![Purchase Guide](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/2367958951/p103054.png)
 
 3.  In the **Enter the required information to generate a list of recommended services** section, enter the required information.
 
-    -   **Acceleration Area**: Select the area that requires acceleration. Select **China \(Hong Kong\)** in this example.
+    -   **Acceleration Region**: Select the region that requires acceleration. **China \(Hong Kong\)** is selected in this example.
     -   **Service Region**: Select the region where the origin servers are located. **US \(Silicon Valley\)** is selected in this example.
-    -   **ICP Filing**: If you need to accelerate a web service, specify whether the domain name of the web service has applied for an Internet Content Provider \(ICP\) number. If the service is not a web service, select **No**. In this example, **No** is selected.
+    -   **ICP Filing**: If you need to accelerate a web service, specify whether you have requested an Internet Content Provider \(ICP\) number for the domain name of the web service. If the service is not a web service, select **No**. **No** is selected in this example.
 
         **Note:** All websites must obtain an ICP number before they are permitted to provide services to users in mainland China. For more information, see [What is an ICP filing?]().
 
-    -   **Server Area**: Specify whether the origin servers are deployed on Alibaba Cloud or in the environments outside Alibaba Cloud. **Off Alibaba Cloud** is selected in this example.
+    -   **Server Area**: Specify whether the backend servers are deployed on Alibaba Cloud. **Off Alibaba Cloud** is selected in this example.
     -   **Peak Bandwidth Range**: Enter the bandwidth required during peak hours. Unit: Mbit/s. The value is set to **10** in this example.
-    -   **Maximum Concurrent Connections**: Specify the maximum number of concurrent connections to the GA instance. If the number of existing concurrent connections reaches the upper limit, no extra connections are established. The value is set to **5 thousand** in this example.
+    -   **Maximum Concurrent Connections**: Specify the maximum number of concurrent connections that the GA instance supports. When the number of existing concurrent connections reaches the upper limit, new connection requests are dropped. The value is set to **5 thousand** in this example.
 4.  Click **Generate Service List**.
 
-    After a list is generated, you can check the recommended services in the list.
+    After a service list is generated, you can view the list of recommended services.
 
-    ![Recommended Service List](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/3707827951/p103000.png)
+    ![Recommended service list](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3707827951/p103000.png)
 
 
 ## Step 2: Purchase a GA service bundle
@@ -52,15 +52,15 @@ To purchase a service bundle, perform the following steps:
 
 1.  Click **Generate Service List**.
 
-    ![Generate Service List](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/2367958951/p103007.png)
+    ![Generate Service List](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/2367958951/p103007.png)
 
-2.  On the buy page, specify the following parameters for the GA instance:
+2.  On the buy page, set the following parameters:
 
-    -   **Term**: Select a subscription duration.
+    -   **Term**: Select the subscription duration.
 
-        **Note:** The subscription duration applies to all the services in the recommended service bundle. For example, if you set Term to 1 Year,the subscription duration of the specified GA instance, basic bandwidth plan, and cross-border bandwidth plan is valid for one year.
+        **Note:** The subscription duration applies to the services in the recommended service bundle. For example, if you set Term to 1 Year,the subscription duration of the specified GA instance, basic bandwidth plan, and cross-border bandwidth plan is set to one year.
 
-    -   **Specification**: Select a specification of the GA instance. **Small I** is selected in this example.
+    -   **Specification**: Select a specification for the GA instance that you want to create. **Small I \(Specification Unit\)** is selected in this example.
 
         GA supports the following types of instance specifications: Small I, Small II, Small III, Medium I, Medium II, and Medium III. The acceleration performance can vary based on the instance specification.
 
@@ -105,32 +105,32 @@ To purchase a service bundle, perform the following steps:
 
         **Note:** You can specify ECS or SLB as the backend service type only when your account is included in the whitelist of GA. If you want to specify ECS or SLB as the backend service type, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).
 
-    -   **Peak Bandwidth**: Specify a value as the peak bandwidth for the basic bandwidth plan. The value is set to **10Mb** in this example.
-3.  Click **Buy Now** and pay for the order.
+    -   **Peak Bandwidth**: Specify the maximum bandwidth of the basic bandwidth plan. The value is set to **10** Mbit/s in this example.
+3.  Click **Buy Now** and complete the payment.
 
+4.  After you complete the payment, associate the basic bandwidth plan with the GA instance. For more information, see [Bind a basic bandwidth plan](/intl.en-US/User Guide/Basic bandwidth plans/Bind a basic bandwidth plan.md).
 
-After you purchase the service bundle, the basic bandwidth plan is automatically bound to the GA instance.
 
 ## Step 3: Add an acceleration area
 
 After you purchase a GA instance, you can add one or more acceleration areas where users are located, and allocate bandwidth to these areas.
 
-To add an acceleration area, perform the following steps:
+To add an acceleration region, perform the following steps:
 
-1.  On the **Instances** page, find the GA instance that you created and click the instance ID.
+1.  On the **Instances** page, find the GA instance and click its ID.
 
-2.  On the page that appears, click the **Acceleration Areas** tab. Then, click **Add Acceleration Area**.
+2.  Click the **Acceleration Area** tab, and click **Add Region** on the **Asia Pacific** tab.
 
-3.  In the **Add Acceleration Area** dialog box, specify the following parameters to configure the acceleration area:
+3.  In the **Add Acceleration Area** dialog box, set the following parameters:
 
-    -   **Acceleration Area**: Select the area that requires acceleration. Select **Asia Pacific** in this example.
-    -   **Regions**: Select the region where users are located. Select **China \(Hong Kong\)** in this example.
-    -   **Bandwidth**: Specify the amount of bandwidth to be allocated to the region. The value is set to **10** in this example. Unit: Mbit/s.
-    -   4.  Click **OK**.
+    -   **Regions**: Select the region where users are located. **China \(Hong Kong\)** is selected in this example.
+    -   **Bandwidth**: Select a bandwidth value for the acceleration service. The value is set to **10** in this example. Unit: Mbit/s.
+    -   **Internet Protocol**: Select the IP version that is used to connect the clients to GA. **IPv4** is selected in this example.
+4.  Click **OK**.
 
-    After you add the region, the system assigns an accelerated IP address to the region that is added to the GA instance. This accelerated IP address is used to forward requests of users in the specified region to the specified origin server through GA and accelerate connections to the origin server.
+    After you add the region, the system assigns an accelerated IP address to the region that is added to the GA instance. This accelerated IP address is used to forward requests from users in the specified region to the specified origin server through GA and accelerate connections to the origin server.
 
-    ![Accelerated IP address](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/9298035951/p84380.png)
+    ![Accelerated IP address](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7275625161/p84380.png)
 
 
 ## Step 4: Add a listener
@@ -139,36 +139,36 @@ Listeners are used to monitor connection requests from clients. GA monitors conn
 
 To add a listener to the GA instance, perform the following steps:
 
-1.  On the instance details page, click the **Listeners** tab. Then, click **Add Listener**.
+1.  On the instance details page, click the **Listeners** tab and then click **Add Listener**.
 
-2.  In the **Configure Listener & Protocol** wizard, specify the following listener parameters:
+2.  On the **Configure Listener & Protocol** page, set the following parameters for the listener:
 
-    -   **Listener Name**: Enter a name for the listener to be created. The name must be 2 to 128 characters in length, and can contain letters, digits, underscores \(\_\), and hyphens \(-\). It must start with a letter.
+    -   **Listener Name**: Enter a name for the listener. The name must be 2 to 128 characters in length, and can contain digits, underscores \(\_\), and hyphens \(-\). The name must start with a letter.
     -   **Protocol**: Select a protocol for the listener. **TCP** is selected in this example.
-    -   **Port Number**: Enter the listening port number for receiving requests and forwarding requests to the endpoints. Valid values: 1 to 65499. The value is set to **80** in this example.
-    -   **Client Affinity**: Select whether to enable client affinity. If client affinity is enabled, requests from a specific client IP address are always forwarded to the same endpoint. The client IP address is considered as the source IP address. **Source IP Address** is selected in this example.
-    ![Listeners](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/2367958951/p84395.png)
+    -   **Port Number**: Enter the number of the listener port that is used to receive requests and forward requests to endpoints. Valid values: 1 to 65499. The value is set to **80** in this example.
+    -   **Client Affinity**: Select whether to enable client affinity. If client affinity is enabled, requests from the same client IP address are forwarded to the same endpoint when clients access stateful applications. **Source IP Address** is selected in this example.
+    ![Listener](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/5963284161/p84395.png)
 
 3.  Click **Next** to configure an endpoint group.
 
 
 ## Step 5: Configure an endpoint group
 
-Each listener is associated with an endpoint group. You can associate an endpoint group with listeners by specifying the regions to which you want to distribute network traffic. After you associate an endpoint group with a listener, traffic is distributed to the optimal endpoint in the associated endpoint group.
+Each listener is associated with an endpoint group. You can associate an endpoint group with a listener by specifying the regions to which you want to distribute network traffic. After you associate an endpoint group with a listener, traffic is distributed to the optimal endpoint in the associated endpoint group.
 
 To create an endpoint group, perform the following steps:
 
-1.  **Endpoint Group Name**: Enter a name for the endpoint group.
+1.  Enter a name for the endpoint group in the **Endpoint Group Name** field.
 
-2.  Select the region to be associated with the endpoint group. This region is also the place where the origin servers are located.
+2.  Select the region to be associated with the endpoint group. The selected region is where the destination server is deployed.
 
-    **US \(Silicon Valley\)** is selected in this example.
+    In this example, **US \(Silicon Valley\)** is selected.
 
-3.  Specify whether the origin servers are deployed on Alibaba Cloud or in the environments outside Alibaba Cloud. **Off Alibaba Cloud** is selected in this example.
+3.  Specify whether the origin servers are deployed on Alibaba Cloud. **Off Alibaba Cloud** is selected in this example.
 
 4.  Enable or disable the origin servers to reserve client IP addresses in the specified region. After the feature is enabled, origin servers can reserve client IP addresses. This feature is disabled in this topic.
 
-    **Note:** This feature is available to only the accounts that are added to the whitelist. To use this feature,[submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).
+    **Note:** This feature is available for only the Alibaba Cloud accounts that are included in the whitelist. To use this feature,[submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).
 
 5.  Configure endpoints.
 
@@ -176,26 +176,26 @@ To create an endpoint group, perform the following steps:
 
     2.  **Backend Service**: Enter the custom domain name that you want to accelerate.
 
-    3.  **Weight**: Specify a weight for the endpoint. Valid values: 0 to 255. GA routes traffic to endpoints based on the predefined weights.
+    3.  **Weight**: Specify a weight for the endpoint. Valid values: 0 to 255. GA routes network traffic to each endpoint in proportion to the weight of each endpoint.
 
-        **Note:** If you set the weight of an endpoint to 0, GA stops to distribute network traffic to the endpoint. Proceed with caution.
+        **Note:** If you change the weight of an endpoint to 0, GA stops distributing network traffic to the endpoint.
 
-    ![Configure endpoints](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/1978035951/p84372.png)
+    ![Configure endpoints](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9675625161/p84372.png)
 
 6.  Click **Next** to check the configurations. After you confirm the configurations, click **Next**.
 
 
 ## Step 6: Configure a CNAME record
 
-To enable the acceleration service based on the CNAME assigned to your GA instance, you must configure a CNAME record to map your accelerated domain name to the CNAME.
+To enable the acceleration service based on the Canonical Name \(CNAME\) assigned to your GA instance, you must configure a CNAME record to map your accelerated domain name to the CNAME.
 
 To configure a CNAME record, perform the following steps:
 
 1.  Log on to the [Alibaba Cloud DNS console](https://dc.console.aliyun.com/dns).
 
-2.  On the Manage DNS page, find the domain name that you want to manage, and click **Configure** in the **Actions** column to go to the DNS Settings page.
+2.  On the Manage DNS page, find the domain name and click **Configure** in the **Actions** column to go to the DNS Settings page.
 
-3.  Click **Add Record** and specify the following parameters:
+3.  Click **Add Record** and set the following parameters:
 
     1.  **Type**: Select **CNAME** from the drop-down list.
 
@@ -209,24 +209,24 @@ To configure a CNAME record, perform the following steps:
 
     4.  **Value**: Enter the CNAME value that is allocated to your GA instance. You can find the value on the Instances page next to the Instance ID/Name of the instance.
 
-        ![CNAME](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/3947958951/p84125.png)
+        ![CNAME](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3947958951/p84125.png)
 
-    5.  **TTL**: Select **10 minute \(s\)**.
+    5.  **TTL**: Select **10 minute\(s\)**.
 
     6.  Click **OK**.
 
     **Note:**
 
-    -   A new CNAME record immediately takes effect. If you modify the CNAME record, the record takes effect within 72 hours after the modification.
-    -   After you add a CNAME record, it takes about 10 minutes for the system to update the status in the console. The message "You must add the CNAME record" may appear on the Domain Names page. Ignore this message.
+    -   A new CNAME record immediately takes effect. If you modify the CNAME record, the record takes effect within 72 hours after it is modified.
+    -   After you add a CNAME record, it takes about 10 minutes for the system to update the status in the console. If the message "You must add the CNAME record" appears on the Domain Names page, ignore this message.
 
-## Step 7: Test the acceleration of TCP traffic
+## Step 7: Test the acceleration performance of TCP traffic
 
-To test the acceleration of TCP traffic, perform the following steps:
+To test the acceleration performance, perform the following steps:
 
-1.  Open Command Prompt on the client located in the China \(Hong Kong\) region.
+1.  Open the command-line interface on the client that is located in the China \(Hong Kong\) region.
 
-2.  Run the following command to test the latency of data transmission:
+2.  Run the following command to check the network latency of data transmission:
 
     `curl -o /dev/null -s -w "time_connect: %{time_connect}\ntime_starttransfer: %{time_starttransfer}\ntime_total: %{time_total}\n" ""http[s]://<Domain name of the origin server>[:<Port>]""`
 
@@ -234,13 +234,13 @@ To test the acceleration of TCP traffic, perform the following steps:
 
     -   time\_connect: the period between the time when a request is sent and when a TCP connection is established.
     -   time\_starttransfer: the period between the time when a request is sent and when the client receives the first byte returned by the origin server. After this period, the system starts to transmit data packets.
-    -   time\_total: the period between the time when a request is sent and when the client receives the last byte returned by the origin server. This is the total time consumed for the communication between the client and the origin server.
+    -   time\_total: the total connection time. It refers to the time period from when a client sends a connection request to when a backend server responds to the request.
     The following figures show that GA reduces the latency of the web service.
 
-    ![Data transmission before GA is used](../images/p93976.png "The latency of data transmission before GA is used")
+    ![Data transmission before GA is used](../images/p93976.png "Before GA is used")
 
-    ![Data transmission after GA is used](../images/p93977.png "The latency of data transmission after GA is used")
+    ![Data transmission after GA is used](../images/p93977.png "After GA is used")
 
-    **Note:** If you specify UDP as the protocol when you add a listener, you can test the acceleration performance by using the UDPing network performance measurement tool. For more information, see [Test the acceleration of UDP traffic](/intl.en-US/Deployment & Maintenance/Test the acceleration of UDP traffic.md).
+    **Note:** If you specify UDP as the protocol when you add a listener, you can test the acceleration performance by using UDPing. For more information, see [Test the acceleration of UDP traffic](/intl.en-US/Deployment & Maintenance/Test the acceleration of UDP traffic.md).
 
 
