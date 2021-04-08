@@ -2,7 +2,7 @@
 
 Global Accelerator \(GA\) supports only the subscription billing method. You must pay upfront fees to use subscription resources. The billing cycle is 30 days.
 
-**Note:** During the period from April 15, 2020 to April 1, 2021, if a first-time user uses an Alibaba Cloud account to purchase the GA service, a one-month free trial is provided. Note that this account must pass real-name verification as enterprise identities. Submit an application for a free trial. To apply for a free trial, visit the [GA Free Trial Application](https://page-intl.aliyun.com/form/act857014000/index.htm) page. For more information about the free trial and the instance types that support the free trial, see [GA free trials](/intl.en-US/Announcement/GA free trials.md).
+**Note:** During the period from April 1, 2021 to April 1, 2022, if a first-time user uses an Alibaba Cloud account to purchase the GA service, a one-month free trial is provided. Note that this account must pass real-name verification as enterprise identities. Submit an application for a free trial. To apply for a free trial, visit the [GA Free Trial Application](https://page-intl.aliyun.com/form/act857014000/index.htm) page. For more information about the free trial and the instance types that support the free trial, see [GA free trials](/intl.en-US/Announcement/GA free trials.md).
 
 ## Billing items
 
