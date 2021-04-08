@@ -13,7 +13,7 @@ The free-trials are available to only first-time users who have Alibaba Cloud ac
 
 ## Duration
 
-The free trial promotion begins on April 15, 2020 and ends on April 1, 2021. Each applicant can apply for a free trial of up to one month.
+The free trial promotion begins on April 1, 2021 and ends on April 1, 2022. Each applicant can apply for a free trial of up to one month.
 
 ## Participation method
 
