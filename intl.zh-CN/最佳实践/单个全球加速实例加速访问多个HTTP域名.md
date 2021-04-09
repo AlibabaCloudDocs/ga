@@ -116,9 +116,9 @@ keyword: [多域名访问, HTTP监听, 虚拟终端节点组, 转发策略]
         -   阿里云公网IP
         -   自定义IP
         -   自定义域名
-|默认加速全球区域（中国内地到海外区域间的加速通过香港加速点上车），选配跨域加速包后会进一步优化中国内地-海外间的网络加速效果|
+|默认加速全球区域（中国内地到海外区域间的加速通过中国香港加速点上车），选配跨域加速包后会进一步优化中国内地-海外间的网络加速效果|
 
-        **说明：** 目前，将云服务器ECS和负载均衡SLB作为终端节点的功能白名单开放。如需使用，请[提交工单](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex)。
+        **说明：** 目前，将云服务器和负载均衡作为终端节点的功能白名单开放。如需使用，请[提交工单](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex)。
 
     -   **带宽峰值**：选择购买基础带宽包的带宽峰值。本教程选择**10** Mb。
 3.  单击**立即购买**并完成支付。
