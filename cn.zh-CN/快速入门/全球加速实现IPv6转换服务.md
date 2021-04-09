@@ -12,11 +12,11 @@
 
 本教程以下列场景为例指导您如何部署全球加速IPv6转换服务。北京某公司现有的IT系统部署在本地IDC机房，IDC机房为纯IPv4网络。因业务扩展需要，企业现计划使用全球加速产品快速实现IPv6转换，满足IPv6客户端访问后端IPv4 Web服务的需求。
 
-![IPV6转换场景图](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/5029415061/p181764.png)
+![IPV6转换场景图](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/5029415061/p181764.png)
 
 ## 配置步骤
 
-![配置步骤](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/0865034061/p178541.png)
+![配置步骤](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0865034061/p178541.png)
 
 ## 步骤一：填写业务方案
 
@@ -32,7 +32,7 @@
 
     **说明：** 如果您是首次使用全球加速服务，请忽略该步骤。
 
-    ![购买向导](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/8472029951/p103054.png)
+    ![购买向导](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/8472029951/p103054.png)
 
 3.  在**智能推荐产品方案，选择以下与您业务相关的选项**区域，根据以下信息填写业务方案。
 
@@ -49,7 +49,7 @@
 
     生成方案后，您可以查看系统根据您的业务信息智能推荐的购买方案。
 
-    ![IPV6转换服务推荐方案](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6029415061/p181766.png)
+    ![IPV6转换服务推荐方案](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/6029415061/p181766.png)
 
 
 ## 步骤二：组合购买实例
@@ -60,7 +60,7 @@
 
 1.  单击**去组合购买**。
 
-    ![IPV6转换服务推荐方案购买入口](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6029415061/p181767.png)
+    ![IPV6转换服务推荐方案购买入口](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/6029415061/p181767.png)
 
 2.  在购买页面，根据以下信息购买业务所需要的实例。
 
@@ -109,9 +109,9 @@
         -   阿里云公网IP
         -   自定义IP
         -   自定义域名
-|默认加速全球区域（中国内地到海外区域间的加速通过香港加速点上车）|
+|默认加速全球区域（中国内地到海外区域间的加速通过中国香港加速点上车）|
 
-        **说明：** 目前，将云服务器ECS和负载均衡SLB作为终端节点的功能白名单开放。如需使用，请[提交工单](https://selfservice.console.aliyun.com/ticket/category/ga/today)。
+        **说明：** 目前，将云服务器和负载均衡作为终端节点的功能白名单开放。如需使用，请[提交工单](https://selfservice.console.aliyun.com/ticket/category/ga/today)。
 
     -   **带宽峰值**：选择购买基础带宽包的带宽峰值。本教程选择**10 Mb**。
 3.  单击**立即购买**并完成支付。
@@ -138,7 +138,7 @@
 
         加速区域添加成功后，全球加速会为接入地域分配一个可公网访问的IPv6地址作为加速IP，IPv6客户端通过该加速IP访问后端IPv4 Web服务。
 
-        ![IPv6转换服务加速IP](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6029415061/p181777.png)
+        ![IPv6转换服务加速IP](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/6029415061/p181777.png)
 
 
 ## 步骤四：配置监听
@@ -161,7 +161,7 @@
 
         保持客户端亲和性，即客户端访问有状态的应用程序时，可以将来自同一客户端的所有请求都定向到同一终端节点。
 
-    ![配置监听](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6518034061/p178548.png)
+    ![配置监听](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/6518034061/p178548.png)
 
 3.  单击**下一步**配置终端节点组。
 
@@ -191,7 +191,7 @@
 
             **说明：** 如果某个终端节点的权重设置为0，全球加速将终止向该终端节点分发客户端请求，请您谨慎操作。
 
-    ![终端节点组 ](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6029415061/p178552.png)
+    ![终端节点组 ](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/6029415061/p178552.png)
 
 2.  单击**下一步**查看监听和终端节点组配置，确认无误后，再单击**下一步**。
 
@@ -210,6 +210,6 @@
 
     经测试，IPv6客户端通过加速IP可以正常访问后端的IPv4 Web服务。
 
-    ![实现IPV6转换](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/0865034061/p178530.png)
+    ![实现IPV6转换](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0865034061/p178530.png)
 
 
