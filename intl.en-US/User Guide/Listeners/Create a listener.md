@@ -8,7 +8,7 @@ After you create a Global Accelerator \(GA\) instance, you must configure listen
 
 -   A GA instance is created. For more information, see [Create a GA instance](/intl.en-US/User Guide/Global Accelerator instances/Create a GA instance.md).
 -   HTTP and HTTPS listeners are available for only Alibaba Cloud accounts that are included in the whitelist. To create HTTP or HTTPS listeners,[submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).
--   If you want to configure HTTPS listeners, make sure that a certificate signing request is submitted to CA and an SSL certificate is purchased. For more information, see[Select and purchase certificates](https://www.alibabacloud.com/help/zh/doc-detail/28542.htm?spm=a2c63.p38356.b99.28.34582356bpg5Lj) and [Apply for a certificate](/intl.en-US/Issue Certificates/Apply for a certificate.md).
+-   If you want to configure HTTPS listeners, make sure that a certificate signing request is submitted to CA and an SSL certificate is purchased. For more information, see [Select and purchase certificates](https://www.alibabacloud.com/help/zh/doc-detail/28542.htm?spm=a2c63.p38356.b99.28.34582356bpg5Lj) and [Apply for a certificate](/intl.en-US/Issue Certificates/Apply for a certificate.md).
 
 ## Create a TCP or UDP listener
 
