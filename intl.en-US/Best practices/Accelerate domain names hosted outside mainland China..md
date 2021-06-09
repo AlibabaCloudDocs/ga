@@ -420,7 +420,7 @@ To configure an endpoint group, follow these steps:
 
     1.  **Backend Service Type**: Select **Custom Domain Name** from the drop-down list.
 
-    2.  **Backend Service**: Enter the IP address of the CNAME assigned by WAF after you set website parameters in Step 5. For more information, see[Step 5: Add website configurations](#section_jlx_hdy_zsf).
+    2.  **Backend Service**: Enter the IP address of the CNAME assigned by WAF after you set website parameters in Step 5. For more information, see [Step 5: Add website configurations](#section_jlx_hdy_zsf).
 
     3.  **Weight**: Specify a weight for the endpoint. Valid values: 0 to 255. GA routes network traffic to each endpoint in proportion to the weight of each endpoint.
 
