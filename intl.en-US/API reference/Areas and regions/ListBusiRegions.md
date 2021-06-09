@@ -40,75 +40,75 @@ Sample success responses
 <RequestId>1A2262A0-B50A-4C27-8543-E91D9447F967</RequestId>
 <Regions>
     <RegionId>cn-qingdao</RegionId>
-    <LocalName>青岛</LocalName>
+    <LocalName>China (Qingdao)</LocalName>
 </Regions>
 <Regions>
     <RegionId>us-west-1</RegionId>
-    <LocalName>美国（硅谷）</LocalName>
+    <LocalName>US (Silicon Valley)</LocalName>
 </Regions>
 <Regions>
     <RegionId>cn-beijing</RegionId>
-    <LocalName>北京</LocalName>
+    <LocalName>China (Beijing)</LocalName>
 </Regions>
 <Regions>
     <RegionId>cn-hangzhou</RegionId>
-    <LocalName>杭州</LocalName>
+    <LocalName>China (Hangzhou)</LocalName>
 </Regions>
 <Regions>
     <RegionId>cn-shanghai</RegionId>
-    <LocalName>上海</LocalName>
+    <LocalName>China (Shanghai)</LocalName>
 </Regions>
 <Regions>
     <RegionId>cn-chengdu</RegionId>
-    <LocalName>成都</LocalName>
+    <LocalName>China (Chengdu)</LocalName>
 </Regions>
 <Regions>
     <RegionId>cn-shenzhen</RegionId>
-    <LocalName>深圳</LocalName>
+    <LocalName>China (Shenzhen)</LocalName>
 </Regions>
 <Regions>
     <RegionId>cn-hongkong</RegionId>
-    <LocalName>中国香港</LocalName>
+    <LocalName>China (Hong Kong)</LocalName>
 </Regions>
 <Regions>
     <RegionId>ap-northeast-1</RegionId>
-    <LocalName>日本</LocalName>
+    <LocalName>Japan (Tokyo)</LocalName>
 </Regions>
 <Regions>
     <RegionId>ap-south-1</RegionId>
-    <LocalName>印度</LocalName>
+    <LocalName>India (Mumbai)</LocalName>
 </Regions>
 <Regions>
     <RegionId>ap-southeast-1</RegionId>
-    <LocalName>新加坡</LocalName>
+    <LocalName>Singapore</LocalName>
 </Regions>
 <Regions>
     <RegionId>ap-southeast-2</RegionId>
-    <LocalName>悉尼</LocalName>
+    <LocalName>Australia (Sydney)</LocalName>
 </Regions>
 <Regions>
     <RegionId>ap-southeast-3</RegionId>
-    <LocalName>马来西亚</LocalName>
+    <LocalName>Malaysia (Kuala Lumpur)</LocalName>
 </Regions>
 <Regions>
     <RegionId>ap-southeast-5</RegionId>
-    <LocalName>印度尼西亚</LocalName>
+    <LocalName>Indonesia (Jakarta)</LocalName>
 </Regions>
 <Regions>
     <RegionId>us-east-1</RegionId>
-    <LocalName>美国（弗吉尼亚）</LocalName>
+    <LocalName>>US (Virginia)</LocalName>
 </Regions>
 <Regions>
     <RegionId>eu-central-1</RegionId>
-    <LocalName>德国</LocalName>
+    <LocalName>Germany (Frankfurt)</LocalName>
 </Regions>
 <Regions>
     <RegionId>eu-west-1</RegionId>
-    <LocalName>英国</LocalName>
+    <LocalName>UK (London)</LocalName>
 </Regions>
 <Regions>
     <RegionId>ap-northeast-2-pop</RegionId>
-    <LocalName>韩国</LocalName>
+    <LocalName>South Korea</LocalName>
 </Regions>
 ```
 
@@ -120,75 +120,75 @@ Sample success responses
   "Regions": [
     {
       "RegionId": "cn-qingdao",
-      "LocalName": "青岛"
+      "LocalName": "China (Qingdao)"
     },
     {
       "RegionId": "us-west-1",
-      "LocalName": "美国（硅谷）"
+      "LocalName": "US (Silicon Valley)"
     },
     {
       "RegionId": "cn-beijing",
-      "LocalName": "北京"
+      "LocalName": "China (Beijing)"
     },
     {
       "RegionId": "cn-hangzhou",
-      "LocalName": "杭州"
+      "LocalName": "China (Hangzhou)"
     },
     {
       "RegionId": "cn-shanghai",
-      "LocalName": "上海"
+      "LocalName": "China (Shanghai)"
     },
     {
       "RegionId": "cn-chengdu",
-      "LocalName": "成都"
+      "LocalName": "China (Chengdu)"
     },
     {
       "RegionId": "cn-shenzhen",
-      "LocalName": "深圳"
+      "LocalName": "China (Shenzhen)"
     },
     {
       "RegionId": "cn-hongkong",
-      "LocalName": "中国香港"
+      "LocalName": "China (Hong Kong)"
     },
     {
       "RegionId": "ap-northeast-1",
-      "LocalName": "日本"
+      "LocalName": "Japan (Tokyo)"
     },
     {
       "RegionId": "ap-south-1",
-      "LocalName": "印度"
+      "LocalName": "India (Mumbai)"
     },
     {
       "RegionId": "ap-southeast-1",
-      "LocalName": "新加坡"
+      "LocalName": "Singapore"
     },
     {
       "RegionId": "ap-southeast-2",
-      "LocalName": "悉尼"
+      "LocalName": "Australia (Sydney)"
     },
     {
       "RegionId": "ap-southeast-3",
-      "LocalName": "马来西亚"
+      "LocalName": "Malaysia (Kuala Lumpur)"
     },
     {
       "RegionId": "ap-southeast-5",
-      "LocalName": "印度尼西亚"
+      "LocalName": "Indonesia (Jakarta)"
     },
     {
       "RegionId": "us-east-1",
-      "LocalName": "美国（弗吉尼亚）"
+      "LocalName": "US (Virginia)"
     },
     {
       "RegionId": "eu-central-1",
-      "LocalName": "德国"
+      "LocalName": "Germany (Frankfurt)"
     },
     {
       "RegionId": "eu-west-1",
-      "LocalName": "英国"
+      "LocalName": "UK (London)"
     },
     {
       "RegionId": "ap-northeast-2-pop",
-      "LocalName": "韩国"
+      "LocalName": "South Korea"
     }
   ]
 }
