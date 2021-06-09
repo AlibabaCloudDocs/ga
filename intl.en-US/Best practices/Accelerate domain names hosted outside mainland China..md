@@ -90,13 +90,13 @@ To configure an access policy for GTM, perform the following steps:
 
         By default, GTM forwards user traffic to the IP addresses of the origin servers in the default address pool.
 
-        Click **+ New Address Pool** and add the IP addresses of Origin Server 1 and Origin Server 2 in the US \(Silicon Valley\) region to the address pool. Enable HTTP health checks, and specify the address pool as the default address pool. For more information about how to configure health checks,see [TCP health checks](https://www.alibabacloud.com/help/zh/doc-detail/87312.htm).
+        Click **+ New Address Pool** and add the IP addresses of Origin Server 1 and Origin Server 2 in the US \(Silicon Valley\) region to the address pool. Enable HTTP health checks, and specify the address pool as the default address pool. For more information about how to configure health checks, see [t15663.dita\#concept\_fph\_rzt\_vdb/section\_oc3\_ngw\_vdb](t15663.dita#concept_fph_rzt_vdb/section_oc3_ngw_vdb).
 
     4.  **Alternative Address Pool**: Select an alternative address pool.
 
         An alternative address pool is an IP address pool that contains IP addresses of secondary origin servers. GTM forwards requests to the secondary origin servers when the servers in the default address pool are unavailable.
 
-        Click **+ New Address Pool** and add Origin Server 3 and Origin Server 4 in the US \(Silicon Valley\) region to the alternative address pool. Configure health checks, and specify the address pool as an alternative address pool. For more information about how to configure health checks,see [TCP health checks](https://www.alibabacloud.com/help/zh/doc-detail/87312.htm).
+        Click **+ New Address Pool** and add Origin Server 3 and Origin Server 4 in the US \(Silicon Valley\) region to the alternative address pool. Configure health checks, and specify the address pool as an alternative address pool. For more information about how to configure health checks, see [t15663.dita\#concept\_fph\_rzt\_vdb/section\_oc3\_ngw\_vdb](t15663.dita#concept_fph_rzt_vdb/section_oc3_ngw_vdb).
 
 6.  Click **Next**.
 
@@ -135,7 +135,7 @@ To configure the basic information for GTM, perform the following steps:
 
         **Note:**
 
-        -   If you have not configured an alert group, log on to the CloudMonitor console and add a contact group. For more information, see [t6224.md\#](/intl.en-US/Alarm service/Alert contacts/Delete an alert contact or alert group.md).
+        -   If you have not configured an alert group, log on to the CloudMonitor console and add a contact group. For more information, see [Delete an alert contact or alert group](/intl.en-US/Alarm service/Alert contacts/Delete an alert contact or alert group.md).
         -   If you have configured a contact group but want to configure the basic information as a Resource Access Management \(RAM\) user, you must first use your Alibaba Cloud account to authorize the RAM user. After the RAM user is authorized, you can log on as a RAM user to read messages sent to the alert group.
 2.  Click **Complete**.
 
@@ -246,7 +246,7 @@ Perform the following steps to route user traffic to WAF before it reaches the d
 
         The custom port **9000** is specified in this topic.
 
-        **Note:** By default, WAF supports the following ports: HTTP ports 80 and 8080, and HTTPS ports 443 and 8443. WAF instances of Business and Enterprise Edition support more non-standard ports, and have corresponding limits on the total number of ports used by the protected domain name. For more information, see [t15555.md\#](/intl.en-US/Website Access/View the ports supported by WAF.md).
+        **Note:** By default, WAF supports the following ports: HTTP ports 80 and 8080, and HTTPS ports 443 and 8443. WAF instances of Business and Enterprise Edition support more non-standard ports, and have corresponding limits on the total number of ports used by the protected domain name. For more information, see [View the ports supported by WAF](https://www.alibabacloud.com/help/doc-detail/51541.htm?spm=a2c63.p38356.879954.21.313c4856M3wrQZ#concept-ild-n1l-l2b).
 
     5.  **Load Balancing Algorithm**: If multiple origin server IP addresses are specified, select **IP hash** or **Round-robin**. WAF distributes requests to these servers based on the specified algorithm for load balancing.
 
