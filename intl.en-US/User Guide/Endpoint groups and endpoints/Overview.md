@@ -26,11 +26,14 @@ Listeners that use different listener protocols support different types of endpo
 
 An endpoint serves as the destination that a client requests to access. You can add one to four endpoints to an endpoint group. An endpoint can be an Elastic Compute Service \(ECS\) instance, a Server Load Balancer \(SLB\) instance, an Alibaba Cloud public IP address, a custom origin IP address, or a custom origin domain name.
 
-**Note:** You can specify an ECS or SLB instance as an endpoint only if your Alibaba Cloud account is included in the whitelist. To use this feature,[submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).
+**Note:**
+
+-   You can specify an ECS or SLB instance as an endpoint only if your Alibaba Cloud account is included in the whitelist. To use this feature,[submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).
+-   GA Instance Endpoint Group IP is for end users only and is not shared with other users.
 
 You can set a weight for an endpoint. The weight specifies the proportion of network traffic that is forwarded to the endpoint. GA calculates the sum of all endpoint weights in an endpoint group. Then, traffic is forwarded to each endpoint based on the proportion of each endpoint.
 
 ## References
 
-[Create an endpoint group](/intl.en-US/User Guide/Endpoint groups and endpoints/Configure an endpoint group.md)
+[Create an endpoint group](/intl.en-US/User Guide/Endpoint groups and endpoints/Create an endpoint group.md)
 
