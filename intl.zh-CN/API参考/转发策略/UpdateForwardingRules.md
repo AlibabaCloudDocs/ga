@@ -10,6 +10,7 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
+|Action|String|是|UpdateForwardingRules|系统规定参数。取值：**UpdateForwardingRules** |
 |RegionId|String|是|cn-hangzhou|全球加速实例所属的地域ID，仅取值：**cn-hangzhou**。 |
 |ClientToken|String|否|02fb3da4\*\*\*\*|客户端Token，用于保证请求的幂等性。
 
@@ -77,10 +78,10 @@ HTTP/1.1 200 OK
 Content-Type:application/xml
 
 <UpdateForwardingRulesResponse>
-<RequestId>64ADAB1E-0B7F-4FD8-A404-3BECC0E9CCFF</RequestId>
-<ForwardingRules>
-    <ForwardingRuleId>frule-bp1dii16gu9qdvb34****</ForwardingRuleId>
-</ForwardingRules>
+    <ForwardingRules>
+        <ForwardingRuleId>frule-bp1dii16gu9qdvb34****</ForwardingRuleId>
+    </ForwardingRules>
+    <RequestId>64ADAB1E-0B7F-4FD8-A404-3BECC0E9CCFF</RequestId>
 </UpdateForwardingRulesResponse>
 ```
 
@@ -91,10 +92,10 @@ HTTP/1.1 200 OK
 Content-Type:application/json
 
 {
-  "RequestId" : "64ADAB1E-0B7F-4FD8-A404-3BECC0E9CCFF",
   "ForwardingRules" : [ {
     "ForwardingRuleId" : "frule-bp1dii16gu9qdvb34****"
-  } ]
+  } ],
+  "RequestId" : "64ADAB1E-0B7F-4FD8-A404-3BECC0E9CCFF"
 }
 ```
 
