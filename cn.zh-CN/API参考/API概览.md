@@ -1,6 +1,6 @@
 # API概览
 
-全球加速提供如下API供您使用。
+全球加速提供以下API供您使用。
 
 ## 全球加速实例
 
@@ -23,7 +23,7 @@
 |[UpdateBandwidthPackage](/cn.zh-CN/API参考/带宽包/UpdateBandwidthPackage.md)|修改带宽包。|
 |[ReplaceBandwidthPackage](/cn.zh-CN/API参考/带宽包/ReplaceBandwidthPackage.md)|替换带宽包。|
 
-## 加速区域
+## 加速地域
 
 |API|描述|
 |---|--|
@@ -63,4 +63,25 @@
 |[ListAccelerateAreas](/cn.zh-CN/API参考/区域与地域/ListAccelerateAreas.md)|查询可用的加速区域和地域。|
 |[ListBusiRegions](/cn.zh-CN/API参考/区域与地域/ListBusiRegions.md)|查询加速业务支持的地域。|
 |[DescribeRegions](/cn.zh-CN/API参考/区域与地域/DescribeRegions.md)|查询实例部署的地域。|
+
+## 转发策略
+
+|API|描述|
+|---|--|
+|[CreateForwardingRules](/cn.zh-CN/API参考/转发策略/CreateForwardingRules.md)|创建转发策略。|
+|[UpdateForwardingRules](/cn.zh-CN/API参考/转发策略/UpdateForwardingRules.md)|更新转发策略。|
+|[ListForwardingRules](/cn.zh-CN/API参考/转发策略/ListForwardingRules.md)|查看已经创建的转发策略信息。|
+|[DeleteForwardingRules](/cn.zh-CN/API参考/转发策略/DeleteForwardingRules.md)|删除转发策略。|
+
+## 访问控制
+
+|API|描述|
+|---|--|
+|[UpdateAclAttribute](/cn.zh-CN/API参考/访问控制/UpdateAclAttribute.md)|修改访问控制策略组属性。|
+|[AddEntriesToAcl](/cn.zh-CN/API参考/访问控制/AddEntriesToAcl.md)|在访问控制策略组中添加IP条目。|
+|[ListAcls](/cn.zh-CN/API参考/访问控制/ListAcls.md)|查询某一个地域的ACL列表。|
+|[GetAcl](/cn.zh-CN/API参考/访问控制/GetAcl.md)|获取访问控制策略。|
+|[DeleteAcl](/cn.zh-CN/API参考/访问控制/DeleteAcl.md)|删除访问控制。|
+|[AssociateAclsWithListener](/cn.zh-CN/API参考/访问控制/AssociateAclsWithListener.md)|关联ACL到监听。|
+|[DissociateAclsFromListener](/cn.zh-CN/API参考/访问控制/DissociateAclsFromListener.md)|将ACL与监听解除关联。|
 
