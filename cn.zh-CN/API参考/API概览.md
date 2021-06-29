@@ -27,13 +27,13 @@
 
 |API|描述|
 |---|--|
-|[CreateIpSets](/cn.zh-CN/API参考/加速区域/CreateIpSets.md)|创建加速地域。|
-|[DescribeIpSet](/cn.zh-CN/API参考/加速区域/DescribeIpSet.md)|查询加速地域。|
-|[ListIpSets](/cn.zh-CN/API参考/加速区域/ListIpSets.md)|查询加速地域列表。|
-|[UpdateIpSet](/cn.zh-CN/API参考/加速区域/UpdateIpSet.md)|修改加速区域中指定的加速地域。|
-|[UpdateIpSets](/cn.zh-CN/API参考/加速区域/UpdateIpSets.md)|修改加速区域中的多个加速地域。|
-|[DeleteIpSet](/cn.zh-CN/API参考/加速区域/DeleteIpSet.md)|删除一个加速地域。|
-|[DeleteIpSets](/cn.zh-CN/API参考/加速区域/DeleteIpSets.md)|删除多个加速地域。|
+|[CreateIpSets](/cn.zh-CN/API参考/加速地域/CreateIpSets.md)|创建加速地域。|
+|[DescribeIpSet](/cn.zh-CN/API参考/加速地域/DescribeIpSet.md)|查询加速地域。|
+|[ListIpSets](/cn.zh-CN/API参考/加速地域/ListIpSets.md)|查询加速地域列表。|
+|[UpdateIpSet](/cn.zh-CN/API参考/加速地域/UpdateIpSet.md)|修改加速区域中指定的加速地域。|
+|[UpdateIpSets](/cn.zh-CN/API参考/加速地域/UpdateIpSets.md)|修改加速区域中的多个加速地域。|
+|[DeleteIpSet](/cn.zh-CN/API参考/加速地域/DeleteIpSet.md)|删除一个加速地域。|
+|[DeleteIpSets](/cn.zh-CN/API参考/加速地域/DeleteIpSets.md)|删除多个加速地域。|
 
 ## 监听
 
