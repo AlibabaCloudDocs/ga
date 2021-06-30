@@ -11,8 +11,8 @@
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
 |Action|String|是|DetachDdosFromAccelerator|系统规定参数。取值：**DetachDdosFromAccelerator**。 |
-|AcceleratorId|String|否|ga-bp1odcab8tmno0hdq\*\*\*\*|全球加速实例ID。 |
-|RegionId|String|否|cn-hangzhou|全球加速实例所在的地域，仅取值**cn-hangzhou**。 |
+|AcceleratorId|String|是|ga-bp1odcab8tmno0hdq\*\*\*\*|全球加速实例ID。 |
+|RegionId|String|否|cn-hangzhou|全球加速实例所在的地域ID，仅取值**cn-hangzhou**。 |
 
 ## 返回数据
 
@@ -27,26 +27,34 @@
 
 ```
 http(s)://[Endpoint]/?Action=DetachDdosFromAccelerator
-&<公共请求参数>
+&AcceleratorId=ga-bp1odcab8tmno0hdq****
+&RegionId=cn-hangzhou
+&公共请求参数
 ```
 
 正常返回示例
 
-`XML` 格式
+`XML`格式
 
 ```
-<DetachDdosFromAcceleratorResponse>  
-      <DdosId>ddoscoo-cn-zz11vq7j****</DdosId>
-      <RequestId>E9C82FD2-C77F-4F10-B185-2F4E2670289E</RequestId>
+HTTP/1.1 200 OK
+Content-Type:application/xml
+
+<DetachDdosFromAcceleratorResponse>
+    <DdosId>ddoscoo-cn-zz11vq7j****</DdosId>
+    <RequestId>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</RequestId>
 </DetachDdosFromAcceleratorResponse>
 ```
 
-`JSON` 格式
+`JSON`格式
 
 ```
+HTTP/1.1 200 OK
+Content-Type:application/json
+
 {
-  "DdosId": "ddoscoo-cn-zz11vq7j****",
-  "RequestId": "E9C82FD2-C77F-4F10-B185-2F4E2670289E"
+  "DdosId" : "ddoscoo-cn-zz11vq7j****",
+  "RequestId" : "0ED8D006-F706-4D23-88ED-E11ED28DCAC0"
 }
 ```
 
