@@ -10,9 +10,14 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|CreateAccelerator|系统规定参数。
+|Action|String|是|CreateAccelerator|系统规定参数。取值：**CreateAccelerator**。 |
+|RegionId|String|是|cn-hangzhou|全球加速实例所属的地域ID，仅取值：**cn-hangzhou**。 |
+|ClientToken|String|否|123e4567\*\*\*\*|保证请求幂等性。
 
- 取值：**CreateAccelerator**。 |
+ 从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。 |
+|Name|String|否|test|全球加速实例的名称。
+
+ 名称长度为2~128个字符，以大小写字母或中文开头，可包含数字、下划线（\_）或短划线（-）。 |
 |Duration|Integer|是|1|购买时长。
 
  -   当**PricingCycle**取值**Month**时，**Duration**取值范围为**1**~**9**。
@@ -21,7 +26,6 @@
 
  -   **Month**：按月计费。
 -   **Year**：按年计费。 |
-|RegionId|String|是|cn-hangzhou|全球加速实例所属的地域ID，仅取值：**cn-hangzhou**。 |
 |Spec|String|是|1|全球加速实例的规格，取值：
 
  -   **1**：小型Ⅰ。
@@ -32,12 +36,6 @@
 -   **10**：中型Ⅲ。
 
  实例规格不同，定义也不同。更多信息，请参见[实例规格](~~153127~~)。 |
-|ClientToken|String|否|123e4567\*\*\*\*|保证请求幂等性。
-
- 从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。 |
-|Name|String|否|test|全球加速实例的名称。
-
- 名称长度为2~128个字符，以大小写字母或中文开头，可包含数字、下划线（\_）或短划线（-）。 |
 |AutoPay|Boolean|否|true|是否自动付费，取值：
 
  -   **false**（默认值）：不开启自动付费，生成订单后需要到订单中心完成支付。
@@ -53,11 +51,11 @@
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|AcceleratorId|String|ga-bp17frjjh0udz4qz\*\*\*\*|全球加速实例ID。 |
+|RequestId|String|F591955F-5CB5-4CCE-A75D-17CF2085CE22|请求ID。 |
 |OrderId|String|2082574365|订单ID。
 
  如果您未自动支付账单，请您前往订单中心完成支付。 |
-|RequestId|String|F591955F-5CB5-4CCE-A75D-17CF2085CE22|请求ID。 |
+|AcceleratorId|String|ga-bp17frjjh0udz4qz\*\*\*\*|全球加速实例ID。 |
 
 ## 示例
 
@@ -65,11 +63,16 @@
 
 ```
 http(s)://[Endpoint]/?Action=CreateAccelerator
+&RegionId=cn-hangzhou
+&ClientToken=123e4567****
+&Name=test
 &Duration=1
 &PricingCycle=Month
-&RegionId=cn-hangzhou
 &Spec=1
-&<公共请求参数>
+&AutoPay=true
+&AutoUseCoupon=true
+&PromotionOptionNo=无
+&公共请求参数
 ```
 
 正常返回示例
@@ -77,20 +80,26 @@ http(s)://[Endpoint]/?Action=CreateAccelerator
 `XML`格式
 
 ```
+HTTP/1.1 200 OK
+Content-Type:application/xml
+
 <CreateAcceleratorResponse>
-  <RequestId>F591955F-5CB5-4CCE-A75D-17CF2085CE22</RequestId>
-  <OrderId>2082574365</OrderId>
-  <AcceleratorId>ga-bp1m9qeneer8cw3qq****</AcceleratorId>
+    <RequestId>F591955F-5CB5-4CCE-A75D-17CF2085CE22</RequestId>
+    <OrderId>2082574365</OrderId>
+    <AcceleratorId>ga-bp17frjjh0udz4qz****</AcceleratorId>
 </CreateAcceleratorResponse>
 ```
 
 `JSON`格式
 
 ```
+HTTP/1.1 200 OK
+Content-Type:application/json
+
 {
-  "RequestId": "F591955F-5CB5-4CCE-A75D-17CF2085CE22",
-  "OrderId": "2082574365",
-  "AcceleratorId": "ga-bp1m9qeneer8cw3qq****"
+  "RequestId" : "F591955F-5CB5-4CCE-A75D-17CF2085CE22",
+  "OrderId" : "2082574365",
+  "AcceleratorId" : "ga-bp17frjjh0udz4qz****"
 }
 ```
 
