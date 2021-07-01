@@ -11,34 +11,52 @@
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
 |Action|String|是|ListEndpointGroups|系统规定参数。取值：**ListEndpointGroups**。 |
-|AcceleratorId|String|是|ga-bp1odcab8tmno0hdq\*\*\*\*|全球加速实例ID。 |
 |RegionId|String|是|cn-hangzhou|全球加速实例所在的地域ID，仅取值**cn-hangzhou**。 |
 |PageNumber|Integer|否|1|列表的页码，默认值为**1**。 |
 |PageSize|Integer|否|10|分页查询时每页的行数，最大值为**50**，默认值为**10**。 |
+|AcceleratorId|String|是|ga-bp1odcab8tmno0hdq\*\*\*\*|全球加速实例ID。 |
 |ListenerId|String|否|lsr-bp1bpn0kn908w4nbw\*\*\*\*|监听实例ID。 |
 |EndpointGroupType|String|否|virtual|终端节点组类型。取值：
 
  -   **default**：默认终端节点组。
 -   **virtual**：虚拟终端节点组。
 -   空值：表示查询所有默认终端节点组和虚拟终端节点组。 |
+|AccessLogSwitch|String|否|on|是否开启访问日志。取值:
+
+ -   **on**：开启访问日志。
+-   **off**（默认值）：关闭访问日志。 |
+|EndpointGroupId|String|否|epg-bp16jdc00bhe97sr5\*\*\*\*|终端节点组ID。 |
 
 ## 返回数据
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
+|TotalCount|Integer|10|列表条目数。 |
+|PageSize|Integer|10|每页包含的条目数。 |
+|RequestId|String|A052D49E-CCC2-41DB-816C-DC3381503194|请求ID。 |
+|PageNumber|Integer|1|当前页码。 |
 |EndpointGroups|Array of EndpointGroups| |终端节点组配置信息。 |
-|Description|String|group1|终端节点组的描述信息。 |
+|EndpointGroupId|String|epg-bp16jdc00bhe97sr5\*\*\*\*|终端节点组ID。 |
+|EndpointGroupIpList|Array of String|101.XX.XX.22|加速区域列表。 |
+|State|String|active|终端节点组的状态。
+
+ -   **init**：初始化。
+-   **active**：正常。
+-   **creating**：创建中。
+-   **configuring**：配置中。 |
+|HealthCheckPath|String|/healthcheck|健康检查路径。 |
+|EndpointGroupRegion|String|cn-hangzhou|终端节点组所属的地域ID。 |
+|HealthCheckIntervalSeconds|Integer|3|健康检查的时间间隔，单位为秒。 |
+|TrafficPercentage|Integer|20|监听有多个终端节点组时的权重。 |
+|HealthCheckProtocol|String|tcp|健康检查的协议。
+
+ -   **tcp**：TCP协议。
+-   **http**：HTTP协议。
+-   **https**：HTTPS协议。 |
+|ThresholdCount|Integer|3|健康检查判定终端节点为不健康的次数。 |
+|ListenerId|String|lsr-bp1bpn0kn908w4nbw\*\*\*\*|监听实例ID。 |
+|AcceleratorId|String|ga-bp1odcab8tmno0hdq\*\*\*\*|全球加速实例ID。 |
 |EndpointConfigurations|Array of EndpointConfigurations| |终端节点配置信息。 |
-|EnableClientIPPreservation|Boolean|false|是否开启保持客户端源IP功能。
-
- -   **true**：开启了保持客户端源IP功能。
--   **false**：未开启保持客户端源IP功能。 |
-|Endpoint|String|120.XX.XX.21|终端节点的IP或域名。 |
-|ProbePort|Integer|80|延时监控的探测端口。 |
-|ProbeProtocol|String|tcp|延时监控的探测协议。
-
- -   **icmp**：icms协议。
--   **tcp**：tcp协议。 |
 |Type|String|Ip|终端节点类型。
 
  -   **Domain**：自定义域名。
@@ -46,44 +64,32 @@
 -   **PublicIp**：阿里云公网IP。
 -   **ECS**：阿里云ECS实例。
 -   **SLB**：阿里云SLB实例。 |
+|EnableClientIPPreservation|Boolean|false|是否开启保持客户端源IP功能。
+
+ -   **true**：开启了保持客户端源IP功能。
+-   **false**：未开启保持客户端源IP功能。 |
 |Weight|Integer|20|终端节点的权重。 |
-|EndpointGroupId|String|epg-bp16jdc00bhe97sr5\*\*\*\*|终端节点组ID。 |
-|EndpointGroupIpList|List|101.XX.XX.22|下车点IP列表。 |
-|EndpointGroupRegion|String|cn-hangzhou|终端节点组所属的地域ID。 |
+|ProbeProtocol|String|tcp|延时监控的探测协议。
+
+ -   **icmp**：ICMP协议。
+-   **tcp**：TCP协议。 |
+|Endpoint|String|120.XX.XX.21|终端节点的IP或域名。 |
+|ProbePort|Integer|80|延时监控的探测端口。 |
+|PortOverrides|Array of PortOverrides| |端口映射关系。 |
+|ListenerPort|Integer|443|监听端口。 |
+|EndpointPort|Integer|80|终端节点端口。 |
+|ForwardingRuleIds|Array of String|frule-bp19a3t3yzr21q3\*\*\*\*|终端节点组关联的转发策略ID。 |
 |EndpointGroupType|String|default|终端节点组类型。取值：
 
  -   **default**：默认终端节点组。
 -   **virtual**：虚拟终端节点组。 |
 |EndpointRequestProtocol|String|HTTP|后端服务协议。取值：
 
- -   **HTTP**
--   **HTTPS** |
-|ForwardingRuleIds|List|frule-bp19a3t3yzr21q3\*\*\*\*|终端节点组关联的转发策略ID。 |
-|HealthCheckIntervalSeconds|Integer|3|健康检查的时间间隔，单位为秒。 |
-|HealthCheckPath|String|/healthcheck|健康检查路径。 |
-|HealthCheckPort|Integer|10|健康检查的端口。 |
-|HealthCheckProtocol|String|tcp|健康检查的协议。
-
- -   **tcp**：TCP协议。
--   **http**：HTTP协议。
--   **https**：HTTPS协议。 |
-|ListenerId|String|lsr-bp1bpn0kn908w4nbw\*\*\*\*|监听实例ID。 |
+ -   **HTTP**：HTTP协议。
+-   **HTTPS**：HTTPS协议。 |
+|Description|String|group1|终端节点组的描述信息。 |
 |Name|String|group1|终端节点组的名称。 |
-|PortOverrides|Array of PortOverrides| |端口映射关系。 |
-|EndpointPort|Integer|80|终端节点端口。 |
-|ListenerPort|Integer|443|监听端口。 |
-|State|String|active|终端节点组的状态。
-
- -   **init**：初始化。
--   **active**：正常。
--   **creating**：创建中。
--   **configuring**：配置中。 |
-|ThresholdCount|Integer|3|健康检查判定终端节点为不健康的次数。 |
-|TrafficPercentage|Integer|20|监听有多个终端节点组时的权重。 |
-|PageNumber|Integer|1|当前页码。 |
-|PageSize|Integer|10|每页包含的条目数。 |
-|RequestId|String|A052D49E-CCC2-41DB-816C-DC3381503194|请求ID。 |
-|TotalCount|Integer|10|列表条目数。 |
+|HealthCheckPort|Integer|10|健康检查的端口。 |
 
 ## 示例
 
@@ -91,9 +97,15 @@
 
 ```
 http(s)://[Endpoint]/?Action=ListEndpointGroups
-&AcceleratorId=ga-bp1odcab8tmno0hdq****
 &RegionId=cn-hangzhou
-&<公共请求参数>
+&PageNumber=1
+&PageSize=10
+&AcceleratorId=ga-bp1odcab8tmno0hdq****
+&ListenerId=lsr-bp1bpn0kn908w4nbw****
+&EndpointGroupType=virtual
+&AccessLogSwitch=on
+&EndpointGroupId=epg-bp16jdc00bhe97sr5****
+&公共请求参数
 ```
 
 正常返回示例
@@ -101,68 +113,90 @@ http(s)://[Endpoint]/?Action=ListEndpointGroups
 `XML`格式
 
 ```
+HTTP/1.1 200 OK
+Content-Type:application/xml
+
 <ListEndpointGroupsResponse>
-  <TotalCount>1</TotalCount>
-  <RequestId>A052D49E-CCC2-41DB-816C-DC3381503194</RequestId>
-  <PageSize>10</PageSize>
-  <PageNumber>1</PageNumber>
-  <EndpointGroups>
-        <EndpointGroupIpList>39.XX.XX.42</EndpointGroupIpList>
-        <EndpointGroupIpList>39.XX.XX.106</EndpointGroupIpList>
-        <EndpointGroupIpList>47.XX.XX.140</EndpointGroupIpList>
-        <EndpointGroupIpList>39.XX.XX.162</EndpointGroupIpList>
-        <EndpointGroupRegion>cn-hangzhou</EndpointGroupRegion>
+    <TotalCount>10</TotalCount>
+    <PageSize>10</PageSize>
+    <RequestId>A052D49E-CCC2-41DB-816C-DC3381503194	</RequestId>
+    <PageNumber>1</PageNumber>
+    <EndpointGroups>
         <EndpointGroupId>epg-bp16jdc00bhe97sr5****</EndpointGroupId>
+        <EndpointGroupIpList>101.XX.XX.22</EndpointGroupIpList>
         <State>active</State>
+        <HealthCheckPath>/healthcheck</HealthCheckPath>
+        <EndpointGroupRegion>cn-hangzhou</EndpointGroupRegion>
+        <HealthCheckIntervalSeconds>3</HealthCheckIntervalSeconds>
+        <TrafficPercentage>20</TrafficPercentage>
+        <HealthCheckProtocol>tcp</HealthCheckProtocol>
         <ThresholdCount>3</ThresholdCount>
-        <EndpointConfigurations>
-              <EnableProxyProtocol>false</EnableProxyProtocol>
-              <Type>PublicIp</Type>
-              <Endpoint>123.XX.XX.108</Endpoint>
-              <EnableClientIPPreservation>true</EnableClientIPPreservation>
-              <Weight>100</Weight>
-        </EndpointConfigurations>
-        <EndpointGroupType>default</EndpointGroupType>
         <ListenerId>lsr-bp1bpn0kn908w4nbw****</ListenerId>
-  </EndpointGroups>
+        <AcceleratorId>ga-bp1odcab8tmno0hdq****</AcceleratorId>
+        <EndpointConfigurations>
+            <Type>Ip</Type>
+            <EnableClientIPPreservation>false</EnableClientIPPreservation>
+            <Weight>20</Weight>
+            <ProbeProtocol>tcp</ProbeProtocol>
+            <Endpoint>120.XX.XX.21</Endpoint>
+            <ProbePort>80</ProbePort>
+        </EndpointConfigurations>
+        <PortOverrides>
+            <ListenerPort>443</ListenerPort>
+            <EndpointPort>80</EndpointPort>
+        </PortOverrides>
+        <ForwardingRuleIds>frule-bp19a3t3yzr21q3****</ForwardingRuleIds>
+        <EndpointGroupType>default</EndpointGroupType>
+        <EndpointRequestProtocol>HTTP</EndpointRequestProtocol>
+        <Description>group1</Description>
+        <Name>group1</Name>
+        <HealthCheckPort>10</HealthCheckPort>
+    </EndpointGroups>
 </ListEndpointGroupsResponse>
 ```
 
 `JSON`格式
 
 ```
+HTTP/1.1 200 OK
+Content-Type:application/json
+
 {
-  "TotalCount": 1,
-  "RequestId": "A052D49E-CCC2-41DB-816C-DC3381503194",
-  "PageSize": 10,
-  "PageNumber": 1,
-  "EndpointGroups": [
-    {
-      "EndpointGroupIpList": [
-        "39.XX.XX.42",
-        "39.XX.XX.106",
-        "47.XX.XX.140",
-        "39.XX.XX.162"
-      ],
-      "PortOverrides": [],
-      "EndpointGroupRegion": "cn-hangzhou",
-      "ForwardingRuleIds": [],
-      "EndpointGroupId": "epg-bp16jdc00bhe97sr5****",
-      "State": "active",
-      "ThresholdCount": 3,
-      "EndpointConfigurations": [
-        {
-          "EnableProxyProtocol": false,
-          "Type": "PublicIp",
-          "Endpoint": "123.XX.XX.108",
-          "EnableClientIPPreservation": true,
-          "Weight": 100
-        }
-      ],
-      "EndpointGroupType": "default",
-      "ListenerId": "lsr-bp1bpn0kn908w4nbw****"
-    }
-  ]
+  "TotalCount" : 10,
+  "PageSize" : 10,
+  "RequestId" : "A052D49E-CCC2-41DB-816C-DC3381503194\t",
+  "PageNumber" : 1,
+  "EndpointGroups" : [ {
+    "EndpointGroupId" : "epg-bp16jdc00bhe97sr5****",
+    "EndpointGroupIpList" : [ "101.XX.XX.22" ],
+    "State" : "active",
+    "HealthCheckPath" : "/healthcheck",
+    "EndpointGroupRegion" : "cn-hangzhou",
+    "HealthCheckIntervalSeconds" : 3,
+    "TrafficPercentage" : 20,
+    "HealthCheckProtocol" : "tcp",
+    "ThresholdCount" : 3,
+    "ListenerId" : "lsr-bp1bpn0kn908w4nbw****",
+    "AcceleratorId" : "ga-bp1odcab8tmno0hdq****",
+    "EndpointConfigurations" : [ {
+      "Type" : "Ip",
+      "EnableClientIPPreservation" : false,
+      "Weight" : 20,
+      "ProbeProtocol" : "tcp",
+      "Endpoint" : "120.XX.XX.21",
+      "ProbePort" : 80
+    } ],
+    "PortOverrides" : [ {
+      "ListenerPort" : 443,
+      "EndpointPort" : 80
+    } ],
+    "ForwardingRuleIds" : [ "frule-bp19a3t3yzr21q3****" ],
+    "EndpointGroupType" : "default",
+    "EndpointRequestProtocol" : "HTTP",
+    "Description" : "group1",
+    "Name" : "group1",
+    "HealthCheckPort" : 10
+  } ]
 }
 ```
 
