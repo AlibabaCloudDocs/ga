@@ -11,11 +11,6 @@
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
 |Action|String|是|UpdateListener|系统规定参数。取值：**UpdateListener**。 |
-|ListenerId|String|是|lsr-bp1bpn0kn908w4nbw\*\*\*\*|监听实例ID。 |
-|PortRanges.N.FromPort|Integer|是|20|用来接收请求并向终端节点进行转发的起始监听端口。
-
- **说明：** 对于HTTP或HTTPS协议的监听，只支持配置一个监听端口，即起始监听端口和结束监听端口需相同。 |
-|PortRanges.N.ToPort|Integer|是|21|用来接收请求并向终端节点进行转发的结束监听端口。 |
 |RegionId|String|否|cn-hangzhou|全球加速实例所在的地域ID，仅取值**cn-hangzhou**。 |
 |ClientToken|String|否|123e4567-e89b-12d3-a456-426655440000|保证请求幂等性。
 
@@ -32,14 +27,19 @@
 
  -   **tcp**：TCP协议。
 -   **udp**：UDP协议。
--   **HTTP**：HTTP协议。
--   **HTTPS**：HTTPS协议。
+-   **http**：HTTP协议。
+-   **https**：HTTPS协议。
 
- **说明：** 目前，HTTP和HTTPS监听协议白名单开放，如需使用，请提交工单。 |
+ **说明：** 目前，HTTP和HTTPS监听协议白名单开放，如需使用，请[提交工单](https://selfservice.console.aliyun.com/ticket/createIndex.htm)。 |
+|ListenerId|String|是|lsr-bp1bpn0kn908w4nbw\*\*\*\*|监听实例ID。 |
 |ProxyProtocol|String|否|false|是否开启保持客户端源IP功能。
 
  -   **true**：开启保持客户端源IP功能。开启后，支持后端服务查看客户端的原始IP地址。
 -   **false**（默认值）：不开启保持客户端源IP功能。 |
+|PortRanges.N.FromPort|Integer|是|20|用来接收请求并向终端节点进行转发的起始监听端口。
+
+ **说明：** 对于HTTP或HTTPS协议的监听，只支持配置一个监听端口，即起始监听端口和结束监听端口需相同。 |
+|PortRanges.N.ToPort|Integer|是|21|用来接收请求并向终端节点进行转发的结束监听端口。 |
 |Certificates.N.Id|String|否|449\*\*\*\*-cn-hangzhou|SSL证书ID。
 
  **说明：** 仅HTTPS协议的监听需要配置该项。 |
@@ -60,10 +60,18 @@
 
 ```
 http(s)://[Endpoint]/?Action=UpdateListener
+&RegionId=cn-hangzhou
+&ClientToken=123e4567-e89b-12d3-a456-426655440000	
+&Name=Listener
+&Description=Listener
+&ClientAffinity=SOURCE_IP
+&Protocol=tcp
 &ListenerId=lsr-bp1bpn0kn908w4nbw****
-&PortRanges.1.FromPort=20
-&PortRanges.1.ToPort=20
-&<公共请求参数>
+&ProxyProtocol=false
+&PortRanges=[{"FromPort":20,"ToPort":21}]
+&Certificates=[{"Id":"449****-cn-hangzhou"}]
+&BackendPorts=[{"FromPort":80,"ToPort":80}]
+&公共请求参数
 ```
 
 正常返回示例
@@ -71,16 +79,22 @@ http(s)://[Endpoint]/?Action=UpdateListener
 `XML`格式
 
 ```
+HTTP/1.1 200 OK
+Content-Type:application/xml
+
 <UpdateListenerResponse>
-     <RequestId>04F0F334-1335-436C-A1D7-6C044FE73368</RequestId>
+    <RequestId>6FEA0CF3-D3B9-43E5-A304-D217037876A8	</RequestId>
 </UpdateListenerResponse>
 ```
 
 `JSON`格式
 
 ```
+HTTP/1.1 200 OK
+Content-Type:application/json
+
 {
-   "RequestId":"04F0F334-1335-436C-A1D7-6C044FE73368"
+  "RequestId" : "6FEA0CF3-D3B9-43E5-A304-D217037876A8\t"
 }
 ```
 
