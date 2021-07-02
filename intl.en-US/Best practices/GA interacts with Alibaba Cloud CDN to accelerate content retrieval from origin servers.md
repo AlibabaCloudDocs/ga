@@ -105,8 +105,10 @@ To purchase a service bundle, perform the following steps:
         -   Custom domain name
 |By default, network connections are accelerated on a global scale. Network traffic transmitted from mainland China to areas outside China is accelerated in the China \(Hong Kong\) region.If you also purchase a cross-border bandwidth plan, the acceleration of network connections between mainland China and areas outside China are reinforced.|
 
-        **Note:** You can specify ECS or SLB as the backend service type only when your account is included in the whitelist of GA. If you want to specify ECS or SLB as the backend service type, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).
+        **Note:**
 
+        -   You can specify an ECS or SLB instance as an endpoint only if your Alibaba Cloud account is included in the whitelist. To use this feature,[submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).
+        -   GA Instance Endpoint Group IP is for end users only and is not shared with other users.
     -   **Peak Bandwidth**: Specify the maximum bandwidth of the basic bandwidth plan. **10** Mbit/s is specified in this example.
 3.  Click **Buy Now** and pay for the order.
 
@@ -225,10 +227,10 @@ To add a domain name for CDN, perform the following steps:
     -   **Domain Name to Accelerate**: Enter the domain name of the web service to be accelerated. **www.example.com** is entered in this topic.
     -   **Business Type**: Select the business type of your website.
 
-        -   **Image and Small File**: If you need to accelerate the delivery of small-size and static resources, such as small files, images, and web style sheets, we recommend that you select this option. For more information, see [Image and small file distribution](/intl.en-US/Product Introduction/Scenarios/Image and small file distribution.md).
-        -   **Large File Download**: For downloads of static content whose size is greater than 20 MB, we recommend that you select this option. Large file downloads refer to game package installation, app updates, mobile ROM upgrades, and app downloads. For more information, see [Delivery of large files](/intl.en-US/Product Introduction/Scenarios/Delivery of large files.md).
-        -   **VOD**: If you need to accelerate the delivery of audio or video files for VOD playback, we recommend that you select this option. For more information, see [ApsaraVideo for VOD](/intl.en-US/Product Introduction/Scenarios/ApsaraVideo for VOD.md).
-        -   **DCDN**: If your website contains a large amount of dynamic and static content, and most of the requests are for dynamic resources, we recommend that you select this option. For more information, see [DCDN](/intl.en-US/Product Introduction/Scenarios/DCDN.md).
+        -   **Image and Small File**: If you need to accelerate the delivery of small-size and static resources, such as small files, images, and web style sheets, we recommend that you select this option. For more information, see [Image and small file distribution](/intl.en-US/Product Introduction/Scenarios.md).
+        -   **Large File Download**: For downloads of static content whose size is greater than 20 MB, we recommend that you select this option. Large file downloads refer to game package installation, app updates, mobile ROM upgrades, and app downloads. For more information, see [Large file distribution](/intl.en-US/Product Introduction/Scenarios.md).
+        -   **VOD**: If you need to accelerate the delivery of audio or video files for VOD playback, we recommend that you select this option. For more information, see [On-demand audio and video streaming](/intl.en-US/Product Introduction/Scenarios.md).
+        -   **DCDN**: If your website contains a large amount of dynamic and static content, and most of the requests are for dynamic resources, we recommend that you select this option. For more information, see [What is Dynamic Route for CDN?]().
         **Image and Small File** is selected in this topic.
 
     -   **Origin Info**: Configure the origin information.
@@ -289,11 +291,11 @@ To test the acceleration performance, perform the following steps:
 
     `curl -o /dev/null -s -w "time_connect: %{time_connect}\ntime_starttransfer: %{time_starttransfer}\ntime_total: %{time_total}\n" "http[s]://<Domain name of the web service>[:<Port>]"`
 
-    In the request:
+    where:
 
-    -   time\_connect: The amount of time that it takes to establish a TCP connection.
-    -   time\_starttransfer: The data transmission start time. It refers to the time period from when a client sends a request to when a backend server responds to the first byte.
-    -   time\_total: The total connection time. It refers to the time period from when a client sends a connection request to when a backend server responds to the request.
+    -   time\_connect: the period of time that it takes to establish a TCP connection.
+    -   time\_starttransfer: the period of time that it takes for the backend server to send the first byte after the client sends a request.
+    -   time\_total: the period of time that it takes for the backend server to respond to the session after the client sends a request.
     The test result shows that the latency of data transmission from China \(Hong Kong\) to US \(Silicon Valley\) is reduced after GA is set to interact with CDN.
 
     ![The latency of data transmission before GA is used](../images/p76785.png "The latency of data transmission before GA is used")
