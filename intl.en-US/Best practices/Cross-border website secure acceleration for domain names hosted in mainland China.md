@@ -410,13 +410,19 @@ This topic describes how to purchase a subscription WAF instance.
 
 Take the following steps to route user traffic to WAF before it reaches the domain name protected by WAF:
 
-1.  In the status bar, select the region where your WAF instance is deployed. Select **Mainland China** in this topic.
+1.  Log on to the [WAF console](https://yundun.console.aliyun.com/?p=waf).
 
-2.  In the left-side navigation pane, choose **Asset Center** \> **Website Access**.
+2.  In the status bar, select the region where your WAF instance is deployed. Select **Mainland China** in this topic.
 
-3.  On the **Website Access** page, click **Add Domain Name**.
+3.  In the left-side navigation pane, choose **Asset Center** \> **Website Access**.
 
-4.  Follow the Add Domain Name wizard to complete the configuration.
+4.  On the **Website Access** page, click **Add Domain Name**.
+
+5.  On the **Add Domain Name** page, click **Manually Add Other Websites**.
+
+    **Note:** The **Add Domain Name** page appears only when a qualified domain name exists. If **Add Domain Name** does not appear, skip this step.
+
+6.  Follow the Add Domain Name wizard to complete the configuration.
 
     1.  **Domain Name**: Enter the domain name that needs WAF protection. **www.example.com** is entered in this topic.
 
@@ -426,13 +432,38 @@ Take the following steps to route user traffic to WAF before it reaches the doma
             -   WAF protects all subdomains that match the specified wildcard domain name.
             -   If you configure both a wildcard domain name and a precise domain name for a website, forwarding rules and protection policies of the precise domain name prevail over those of the wildcard domain.
         -   Domain names with the `.edu` suffix are not supported. If you want to use a `.edu` domain name, submit a ticket to request technical support.
-    2.  **Destination Server \(IP Address\)**: Select a server address type and enter the address of the origin server.
+    2.  **Protocol Type**: Select the protocol supported by the website. **HTTP** is selected in this example.
+
+        **Note:**
+
+        -   If your website supports HTTPS, select HTTPS, and upload the certificate and the private key file after you set website parameters. For more information, see [Upload HTTPS certificate files]().
+        -   After you select HTTPS, click **Advanced Settings** to enable the HTTP force redirect and HTTP back-to-origin features to ensure efficient access to your website. For more information, see [Enable HTTPS advanced settings]().
+        -   To enable protection for **HTTP 2.0** requests, make sure that the following requirements are met:
+            -   Your WAF is upgraded to Business or Enterprise Edition.
+            -   **HTTPS** is selected.
+    3.  **Destination Server \(IP Address\)**: Select a server address type and enter the address of the origin server.
 
         Both **IP** and **Destination Server \(Domain Name\)** formats are supported. After you connect your website to WAF, WAF redirects filtered requests to the specified address. Select **Destination Server \(Domain Name\)** in this topic, and then enter the CNAME address assigned to the GA instance that you create in Step 4. For more information, see [Step 4: Create a GA instance](#section_efv_yl1_8q1).
 
-    3.  **Load Balancing Algorithm**: If you have specified one or more origin IP addresses, select **IP hash**, **Round Robin**, or **Least time**. WAF distributes requests to these servers based on the specified algorithm for load balancing. **Least time** is selected in this topic.
+    4.  **Destination Server Port**: Specify the service protocol and port of the website.
+
+        WAF receives and forwards traffic for your website through the specified ports. The user traffic destined for the website domain name is only forwarded through the specified service ports. For unspecified ports, WAF does not forward traffic received on these ports to the origin servers. Therefore, no security threats are posed on the origin servers if you enable these ports or if these ports have vulnerabilities.
+
+        **Note:** The protocol and port must be the same as those of the origin server IP address. You cannot change the port after it is specified.
+
+        The custom port **9000** is specified in this topic.
+
+        **Note:** By default, WAF supports the following ports: HTTP ports 80 and 8080, and HTTPS ports 443 and 8443. WAF instances of Business and Enterprise Edition support more non-standard ports, and have corresponding limits on the total number of ports used by the protected domain name. For more information, see [View the ports supported by WAF](/intl.en-US/Website Access/View the ports supported by WAF.md).
+
+    5.  **Load Balancing Algorithm**: If you have specified one or more origin IP addresses, select **IP hash**, **Round Robin**, or **Least time**. WAF distributes requests to these servers based on the specified algorithm for load balancing. **Least time** is selected in this topic.
 
         **Note:** You can select **Least time** only when intelligent load balancing is enabled. For more information, see [Intelligent load balancing](/intl.en-US/Pricing/Subscription/Intelligent load balancing.md).
+
+    6.  **Does a layer 7 proxy \(DDoS Protection/CDN, etc.\) exist in front of WAF**: Select Yes or No based on the actual status of your website. **Yes** is selected in this example.
+
+    7.  **Request Tag**: Enter an unused **Header Field Name** and specify a custom **Header Field Value** to label the requests that are redirected to the origin servers through WAF. WAF adds the specified header field to the filtered requests. This enables your origin server to identify the requests redirected by WAF.
+
+        **Note:** If the requests to your website already contain a specified header field, WAF overwrites the original field value with the specified value.
 
 
 ## Step 12: Purchase an Anti-DDoS Pro instance
