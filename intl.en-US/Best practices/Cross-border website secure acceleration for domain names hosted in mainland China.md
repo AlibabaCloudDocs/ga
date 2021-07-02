@@ -141,7 +141,7 @@ To configure the basic information for GTM, perform the following steps:
 
         **Note:**
 
-        -   If you have not configured an alert group, log on to the Cloud Monitor console and add an alert group. For more information, see [Delete an alert contact or alert group](/intl.en-US/Alarm service/Alert contacts/Delete an alert contact or alert group.md).
+        -   If you have not configured an alert group, log on to the Cloud Monitor console and add an alert group. For more information, see [Create an alert contact or alert group](/intl.en-US/Alarm service/Alert contacts/Create an alert contact or alert group.md).
         -   If you have configured a contact group but want to configure the basic information as a Resource Access Management \(RAM\) user, you must first use your Alibaba Cloud account to authorize the RAM user. After the RAM user is authorized, you can log on as a RAM user to read the alert group information.
 2.  Click **Complete**.
 
