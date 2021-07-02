@@ -162,7 +162,7 @@ This step describes how to purchase a subscription WAF instance.
 
     2.  **Plan**: Select the edition of WAF that you want to activate.
 
-        Different WAF editions are applicable to various business scales and provide different protection features. For more information, see [Editions and features](/intl.en-US/Product Introduction/Editions and features.md). **Enterprise** is selected in this example.
+        Different WAF editions are applicable to various business scales and provide different protection features. For more information, see [WAF deployment plans and editions](/intl.en-US/Product Introduction/WAF deployment plans and editions.md). **Enterprise** is selected in this example.
 
     3.  **Extra Domain**: Specify the number of additional domain names.
 
@@ -246,7 +246,7 @@ Perform the following steps to route user traffic to WAF before it reaches the d
 
         The custom port **9000** is specified in this topic.
 
-        **Note:** By default, WAF supports the following ports: HTTP ports 80 and 8080, and HTTPS ports 443 and 8443. WAF instances of Business and Enterprise Edition support more non-standard ports, and have corresponding limits on the total number of ports used by the protected domain name. For more information, see [View the ports supported by WAF](https://www.alibabacloud.com/help/doc-detail/51541.htm?spm=a2c63.p38356.879954.21.313c4856M3wrQZ#concept-ild-n1l-l2b).
+        **Note:** By default, WAF supports the following ports: HTTP ports 80 and 8080, and HTTPS ports 443 and 8443. WAF instances of Business and Enterprise Edition support more non-standard ports, and have corresponding limits on the total number of ports used by the protected domain name. For more information, see [View the ports supported by WAF](/intl.en-US/Website Access/View the ports supported by WAF.md).
 
     5.  **Load Balancing Algorithm**: If multiple origin server IP addresses are specified, select **IP hash** or **Round-robin**. WAF distributes requests to these servers based on the specified algorithm for load balancing.
 
@@ -263,17 +263,13 @@ Perform the following steps to route user traffic to WAF before it reaches the d
 
 ## Step 6: Create a GA instance
 
-Each GA instance is an acceleration service running on a global scale.
-
-Follow steps below to purchase a GA instance.
-
 1.  Log on to the [Global Accelerator console](https://ga.console.aliyun.com/list).
 
 2.  On the **Instances** page, click **Create Instance**.
 
-3.  On the buy page, set the required parameters, and click **Buy Now**.
+3.  On the buy page, set the following parameters, click **Buy Now**, and then complete the payment.
 
-    1.  Select an instance specification. Select **Medium Ⅰ** in this topic.
+    1.  Select a specification for the GA instance. **Medium Ⅰ** is selected in this example.
 
         GA supports the following types of instance specifications: Small I, Small II, Small III, Medium I, Medium II, and Medium III. The acceleration performance can vary based on the instance specification.
 
@@ -286,7 +282,7 @@ Follow steps below to purchase a GA instance.
         |Medium II|8|160 Mbit/s|40,000|
         |Medium III|10|200 Mbit/s|50,000|
 
-    2.  Select the subscription duration for the GA instance.
+    2.  Select a duration for the GA instance.
 
 
 After the instance is created, the system automatically assigns a CNAME to the instance. The CNAME is used to resolve the domain name of the origin servers.
@@ -295,11 +291,9 @@ After the instance is created, the system automatically assigns a CNAME to the i
 
 ## Step 7: Purchase and associate with a basic bandwidth plan
 
-A basic bandwidth plan provides bandwidth for data transmission over the Internet and inside Alibaba Cloud. To achieve global acceleration, you need to purchase a basic bandwidth plan and bind the basic bandwidth plan to a Global Accelerator instance.
+A basic bandwidth plan provides bandwidth for data transfer over the Internet and within Alibaba Cloud. To achieve global acceleration, you must purchase a basic bandwidth plan and bind it to the GA instance.
 
-To purchase and bind a basic bandwidth plan to a Global Accelerator instance, follow these steps:
-
-1.  On the **Instances** page, click **Buy Basic Bandwidth Plan**.
+1.  On the **Instances** page, click **Purchase Basic Bandwidth Plan**.
 
 2.  On the buy page, set the following parameters, click **Buy Now**, and then pay for the order.
 
@@ -335,13 +329,15 @@ To purchase and bind a basic bandwidth plan to a Global Accelerator instance, fo
         -   Custom domain name
 |By default, network connections are accelerated on a global scale. Network traffic transmitted from mainland China to areas outside China is accelerated in the China \(Hong Kong\) region.If you also purchase a cross-border bandwidth plan, the acceleration of network connections between mainland China and areas outside China are reinforced.|
 
-        **Note:** You can specify an ECS or SLB instance as an endpoint only if your Alibaba Cloud account is included in the whitelist. To use this feature,[submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).
+        **Note:**
 
+        -   You can specify an ECS or SLB instance as an endpoint only if your Alibaba Cloud account is included in the whitelist. To use this feature,[submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).
+        -   GA Instance Endpoint Group IP is for end users only and is not shared with other users.
     2.  **Peak Bandwidth**: Specify the maximum bandwidth value of the basic bandwidth plan. **10Mb** is selected in this example.
 
     3.  **Duration**: Select the duration of the basic bandwidth plan.
 
-3.  Return to the **Instances** page, and click Instance ID.
+3.  Return to the **Instances** page, and click the ID of the GA instance that you created in Step 1.
 
 4.  On the page that appears, click the **Bandwidth Manage** tab.
 
@@ -354,9 +350,7 @@ To purchase and bind a basic bandwidth plan to a Global Accelerator instance, fo
 
 ## Step 8: Add an area that you want to accelerate
 
-After you purchase a basic bandwidth plan, you must add one or more acceleration areas where end users are located, and allocate bandwidth to these areas.
-
-To add an acceleration area, follow these steps:
+After you purchase a basic bandwidth plan, you can specify a region to be accelerated and allocate bandwidth resources used for acceleration.
 
 1.  On the **Instances** page, click the ID of the GA instance that is created in Step 6.
 
@@ -375,48 +369,56 @@ After the acceleration area is added, GA assigns an accelerated IP address to ea
 
 ## Step 9: Create a listener
 
-A listener monitors connection requests from clients. Clients can connect to the specified port of the origin server through the specified protocol.
-
-To add a listener to a Global Accelerator instance, follow these steps:
+A listener is used to check requests from clients. The system forwards requests based on the specified protocol and port.
 
 1.  On the **Instances** page, click the ID of the GA instance that is created in Step 6.
 
-2.  On the Basic Information page, click the **Listeners** tab. Then, click **Add Listener**.
+2.  On the **Listeners** tab, click **Add Listener**.
 
-3.  On the **Configure Listener & Protocol** page, configure the listener:
+3.  On the **Configure Listener & Protocol** page, set the following parameters. Then, click **Next**.
 
-    1.  **Listener Name**: Enter a name for the listener to be created. The name must be 2 to 128 characters in length and can contain letters, digits, underscores \(\_\), and hyphens \(-\). It must start with a letter or Chinese character.
+    |Parameter|Description|
+    |---------|-----------|
+    |**Listener Name**|Enter a name for the listener. The name must be 2 to 128 characters in length, and can contain digits, underscores \(\_\), and hyphens \(-\). It must start with a letter.|
+    |**Protocol**|Select a protocol for the listener. In this topic, **TCP** is selected.|
+    |**Port Number**|Specify a port for the listener. The port is used to receive and forward requests to endpoints. Valid values: 1 to 65499. In this example, **9000** is used.|
+    |**Client Affinity**|Specify whether to enable client affinity. If client affinity is enabled, requests from the same client can be directed to the same endpoint when the client accesses a stateful application. In this example, **Source IP Address** is selected.|
 
-    2.  **Protocol**: Select a protocol for the listener. Select **TCP** in this topic.
+4.  On the **Configure Endpoint Group** page, set the following parameters and click **Next**.
 
-    3.  **Port Number**: Enter a port or port range for receiving and forwarding requests to the endpoints. Valid values: 1 to 65499. Enter **9000** in this topic.
+    1.  Enter a name for the endpoint group in the **Endpoint Group Name** field.
 
-    4.  **Client Affinity**: Select whether to enable client affinity. If the Client Affinity feature is enabled, requests from a specific client are always routed to the same endpoint. Select **Source IP Address** in this topic.
+    2.  Select the region to which the endpoint group and backend servers belong.
 
-    ![Listener](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/1615588951/p95540.png)
+        In this example, **US \(Silicon Valley\)** is selected.
 
-4.  Click **Next** to configure an endpoint group.
+    3.  Specify whether to deploy the backend service on Alibaba Cloud. In this example, **Alibaba Cloud** is selected.
+
+    4.  Specify whether to reserve client IP addresses. After the feature is enabled, backend servers can obtain source IP addresses of clients. In this example, this feature is disabled.
+
+    5.  Configure endpoints.
+
+        |Parameter|Description|
+        |---------|-----------|
+        |**Backend Service Type**|In this example, **Alibaba Cloud Public IP Address** is selected.|
+        |**Backend Service**|Enter the EIP of the backend server. The EIP is used to provide services.|
+        |**Weight**|Specify a weight for the endpoint. Valid values: 0 to 255. GA routes network traffic to each endpoint in proportion to the weight of each endpoint. **Note:** If you set the weight of an endpoint to 0, GA does not route network traffic to the endpoint. Proceed with caution. |
+        |**+ Add Endpoint**|Click **+ Add Endpoint** to specify another server in the US \(Silicon Valley\) region as an endpoint, and set a weight.|
 
 
 ## Step 10: Configure an endpoint group
 
-Each listener is associated with an endpoint group. You can associate an endpoint group with listeners by specifying the regions to which you want to distribute network traffic. After the association is complete, traffic is distributed to the optimal endpoints in the associated endpoint groups.
-
-To configure an endpoint group, follow these steps:
-
-1.  **Endpoint Group Name**: Enter a name for the endpoint group.
-
-2.  Select the region where you want to create the endpoint group. The region specifies where the origin servers are located.
+1.  Select the region where you want to create the endpoint group. The region specifies where the origin servers are located.
 
     In this example, network traffic is forwarded to WAF. Therefore, **United States \(Silicon Valley\)** is selected.
 
-3.  Specify whether the origin servers are deployed on Alibaba Cloud or in the environments outside Alibaba Cloud. **Off Alibaba Cloud** is selected in this example.
+2.  Specify whether the origin servers are deployed on Alibaba Cloud or in the environments outside Alibaba Cloud. **Off Alibaba Cloud** is selected in this example.
 
-4.  Specify whether to reserve client IP addresses. After the feature is enabled, origin servers can reserve client IP addresses. This feature is disabled in this example.
+3.  Specify whether to reserve client IP addresses. After the feature is enabled, origin servers can reserve client IP addresses. This feature is disabled in this example.
 
     **Note:** This feature is available for only the Alibaba Cloud accounts that are included in the whitelist. To use this feature,[submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).
 
-5.  Configure endpoints.
+4.  Configure endpoints.
 
     1.  **Backend Service Type**: Select **Custom Domain Name** from the drop-down list.
 
@@ -427,8 +429,6 @@ To configure an endpoint group, follow these steps:
         **Note:** If you set the weight of an endpoint to 0, GA stops routing network traffic to the endpoint. Proceed with caution.
 
     ![endpoint](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3947958951/p99230.png)
-
-6.  Click **Next** to confirm the configurations, and then click **Next**.
 
 
 ## Step 11: Activate the Anti-DDoS Premium service
@@ -615,11 +615,11 @@ In regions of mainland China, use a Windows operating system to test the perform
 
     `curl -o /dev/null -s -w "time_connect: %{time_connect}\ntime_starttransfer: %{time_starttransfer}\ntime_total: %{time_total}\n" "http[s]://<Web service domain name>[:<Port>]"`
 
-    In the request:
+    where:
 
-    -   time\_connect: The amount of time that it takes to establish a TCP connection.
-    -   time\_starttransfer: The data transmission start time. It refers to the time period from when a client sends a request to when a backend server responds to the first byte.
-    -   time\_total: The total connection time. It refers to the time period from when a client sends a connection request to when a backend server responds to the request.
+    -   time\_connect: the period of time that it takes to establish a TCP connection.
+    -   time\_starttransfer: the period of time that it takes for the backend server to send the first byte after the client sends a request.
+    -   time\_total: the period of time that it takes for the backend server to respond to the session after the client sends a request.
     The test result shows that GA has reduced the network latency when users from mainland China access the web services deployed in the US \(Silicon Valley\) region.
 
     ![The network latency of data transmission before GA is used](../images/p76785.png "The network latency of data transmission before GA is used")
