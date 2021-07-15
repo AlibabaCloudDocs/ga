@@ -111,7 +111,7 @@ Content-Type:application/json
 |400|NotExist.BasicBandwidthPackage|You must specify the basic bandwidth package.|缺少基础带宽包|
 |400|QuotaExceeded.EndPoint|The maximum number of endpoints is exceeded.|终端节点达到Quota限制|
 |400|Exist.EndpointGroup|The endpoint group already exists.|终端节点组已经存在|
-|400|NoPermission.VpcEndpoint|You are not authorized to perform the operation.|用户没有创建服务关联角色的权限，请联系主账号或权限管理员授权当前用户AliyunGlobalAccelerationFullAccess或者创建服务关联角色的自定义权限。自定义权限策略的相关信息如下： ServiceName：vpcendpoint.ga.aliyuncs.com 服务关联角色名称：AliyunServiceRoleForGaVpcEndpoint 执行该操作所需的用户权限：ram:CreateServiceLinkedRole|
+|400|NoPermission.VpcEndpoint|You are not authorized to perform the operation.|用户没有创建服务关联角色的权限，请联系主账号或权限管理员授权当前用户AliyunGlobalAccelerationFullAccess或者创建服务关联角色的自定义权限。自定义权限策略的相关信息包含以下内容：ServiceName为vpcendpoint.ga.aliyuncs.com，服务关联角色名称为AliyunServiceRoleForGaVpcEndpoint，执行该操作所需的用户权限为ram:CreateServiceLinkedRole。|
 |400|QuotaExceeded.RuleConditionConfig|The number of path and host exceeds the limit.|路径和域名数量超过限制|
 
 访问[错误中心](https://error-center.alibabacloud.com/status/product/Ga)查看更多错误码。
