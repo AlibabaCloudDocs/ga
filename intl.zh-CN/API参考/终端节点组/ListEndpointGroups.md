@@ -38,6 +38,7 @@
 |EndpointGroups|Array of EndpointGroups| |终端节点组配置信息。 |
 |EndpointGroupId|String|epg-bp16jdc00bhe97sr5\*\*\*\*|终端节点组ID。 |
 |EndpointGroupIpList|Array of String|101.XX.XX.22|加速区域列表。 |
+|EndpointGroupUnconfirmedIpList|Array of String|101.XX.XX.22|全球加速实例升级后新增待确认的终端节点组IP列表。 |
 |State|String|active|终端节点组的状态。
 
  -   **init**：初始化。
@@ -75,6 +76,7 @@
 -   **tcp**：TCP协议。 |
 |Endpoint|String|120.XX.XX.21|终端节点的IP或域名。 |
 |ProbePort|Integer|80|延时监控的探测端口。 |
+|EndpointId|String|ep-bp1d2utp8qqe2a44t3qeq|终端节点ID。 |
 |PortOverrides|Array of PortOverrides| |端口映射关系。 |
 |ListenerPort|Integer|443|监听端口。 |
 |EndpointPort|Integer|80|终端节点端口。 |
@@ -90,6 +92,10 @@
 |Description|String|group1|终端节点组的描述信息。 |
 |Name|String|group1|终端节点组的名称。 |
 |HealthCheckPort|Integer|10|健康检查的端口。 |
+|HealthCheckEnabled|Boolean|true|是否开启健康检查。
+
+ -   **true**（默认值）：开启健康检查。
+-   **false**：关闭健康检查。 |
 
 ## 示例
 
@@ -124,6 +130,7 @@ Content-Type:application/xml
     <EndpointGroups>
         <EndpointGroupId>epg-bp16jdc00bhe97sr5****</EndpointGroupId>
         <EndpointGroupIpList>101.XX.XX.22</EndpointGroupIpList>
+        <EndpointGroupUnconfirmedIpList>101.XX.XX.22</EndpointGroupUnconfirmedIpList>
         <State>active</State>
         <HealthCheckPath>/healthcheck</HealthCheckPath>
         <EndpointGroupRegion>cn-hangzhou</EndpointGroupRegion>
@@ -140,6 +147,7 @@ Content-Type:application/xml
             <ProbeProtocol>tcp</ProbeProtocol>
             <Endpoint>120.XX.XX.21</Endpoint>
             <ProbePort>80</ProbePort>
+            <EndpointId>ep-bp1d2utp8qqe2a44t3qeq</EndpointId>
         </EndpointConfigurations>
         <PortOverrides>
             <ListenerPort>443</ListenerPort>
@@ -151,6 +159,7 @@ Content-Type:application/xml
         <Description>group1</Description>
         <Name>group1</Name>
         <HealthCheckPort>10</HealthCheckPort>
+        <HealthCheckEnabled>true</HealthCheckEnabled>
     </EndpointGroups>
 </ListEndpointGroupsResponse>
 ```
@@ -169,6 +178,7 @@ Content-Type:application/json
   "EndpointGroups" : [ {
     "EndpointGroupId" : "epg-bp16jdc00bhe97sr5****",
     "EndpointGroupIpList" : [ "101.XX.XX.22" ],
+    "EndpointGroupUnconfirmedIpList" : [ "101.XX.XX.22" ],
     "State" : "active",
     "HealthCheckPath" : "/healthcheck",
     "EndpointGroupRegion" : "cn-hangzhou",
@@ -184,7 +194,8 @@ Content-Type:application/json
       "Weight" : 20,
       "ProbeProtocol" : "tcp",
       "Endpoint" : "120.XX.XX.21",
-      "ProbePort" : 80
+      "ProbePort" : 80,
+      "EndpointId" : "ep-bp1d2utp8qqe2a44t3qeq"
     } ],
     "PortOverrides" : [ {
       "ListenerPort" : 443,
@@ -195,7 +206,8 @@ Content-Type:application/json
     "EndpointRequestProtocol" : "HTTP",
     "Description" : "group1",
     "Name" : "group1",
-    "HealthCheckPort" : 10
+    "HealthCheckPort" : 10,
+    "HealthCheckEnabled" : true
   } ]
 }
 ```
