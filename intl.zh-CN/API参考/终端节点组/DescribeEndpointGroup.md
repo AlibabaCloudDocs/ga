@@ -22,6 +22,8 @@
 |TrafficPercentage|Integer|20|监听实例有多个终端节点组时的权重。 |
 |EndpointGroupId|String|epg-bp14sz7ftcwwjgrdm\*\*\*\*|终端节点组ID。 |
 |Description|String|group1|终端节点组的描述信息。 |
+|EndpointGroupIpList|Array of String|101.XX.XX.22|终端节点组IP列表。 |
+|EndpointGroupUnconfirmedIpList|Array of String|101.XX.XX.22|全球加速实例升级后新增待确认的终端节点组IP列表。 |
 |RequestId|String|6FEA0CF3-D3B9-43E5-A304-D217037876A8|请求ID。 |
 |HealthCheckPath|String|/healthcheck|健康检查路径。 |
 |ThresholdCount|Integer|3|健康检查判定终端节点为不健康的次数。 |
@@ -86,6 +88,10 @@
 
  -   **on**：开启访问日志。
 -   **off**：关闭访问日志。 |
+|HealthCheckEnabled|Boolean|ture|是否开启健康检查。
+
+ -   **true**（默认值）：开启健康检查。
+-   **false**：关闭健康检查。 |
 
 ## 示例
 
@@ -111,6 +117,8 @@ Content-Type:application/xml
     <TrafficPercentage>20</TrafficPercentage>
     <EndpointGroupId>epg-bp14sz7ftcwwjgrdm****</EndpointGroupId>
     <Description>group1</Description>
+    <EndpointGroupIpList>101.XX.XX.22</EndpointGroupIpList>
+    <EndpointGroupUnconfirmedIpList>101.XX.XX.22</EndpointGroupUnconfirmedIpList>
     <RequestId>6FEA0CF3-D3B9-43E5-A304-D217037876A8	</RequestId>
     <HealthCheckPath>/healthcheck</HealthCheckPath>
     <ThresholdCount>3</ThresholdCount>
@@ -126,6 +134,7 @@ Content-Type:application/xml
         <Weight>20</Weight>
         <ProbeProtocol>tcp</ProbeProtocol>
         <Endpoint>120.XX.XX.21</Endpoint>
+        <EnableProxyProtocol>false</EnableProxyProtocol>
         <ProbePort>80</ProbePort>
     </EndpointConfigurations>
     <PortOverrides>
@@ -142,6 +151,7 @@ Content-Type:application/xml
     <SlsLogStoreName>lsn-01</SlsLogStoreName>
     <AccessLogSwitch>on</AccessLogSwitch>
     <EnableAccessLog>false</EnableAccessLog>
+    <HealthCheckEnabled>false</HealthCheckEnabled>
 </DescribeEndpointGroupResponse>
 ```
 
@@ -156,6 +166,8 @@ Content-Type:application/json
   "TrafficPercentage" : 20,
   "EndpointGroupId" : "epg-bp14sz7ftcwwjgrdm****",
   "Description" : "group1",
+  "EndpointGroupIpList" : [ "101.XX.XX.22" ],
+  "EndpointGroupUnconfirmedIpList" : [ "101.XX.XX.22" ],
   "RequestId" : "6FEA0CF3-D3B9-43E5-A304-D217037876A8\t",
   "HealthCheckPath" : "/healthcheck",
   "ThresholdCount" : 3,
@@ -171,6 +183,7 @@ Content-Type:application/json
     "Weight" : 20,
     "ProbeProtocol" : "tcp",
     "Endpoint" : "120.XX.XX.21",
+    "EnableProxyProtocol" : false,
     "ProbePort" : 80
   } ],
   "PortOverrides" : [ {
@@ -186,7 +199,8 @@ Content-Type:application/json
   "SlsProjectName" : "pn-01",
   "SlsLogStoreName" : "lsn-01",
   "AccessLogSwitch" : "on",
-  "EnableAccessLog" : false
+  "EnableAccessLog" : false,
+  "HealthCheckEnabled" : false
 }
 ```
 
