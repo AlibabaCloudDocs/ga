@@ -1,6 +1,6 @@
 # ListAcls
 
-调用ListAcls查询某一个地域的ACL列表。
+调用ListAcls查询ACL列表。
 
 ## 调试
 
@@ -29,11 +29,11 @@
 |RequestId|String|64ADAB1E-0B7F-4FD8-A404-3BECC0E9CCFF|请求ID。 |
 |TotalCount|Integer|10|本次请求条件下的数据总量。 |
 |NextToken|String|FFmyTO70t\*\*\*\*|用来标记当前开始读取的位置，为空表示从头开始。 |
-|MaxResults|Integer|5|本次读取的最大数据记录数量，此参数为可选参数，取值1~100，参数传入为空时，默认为20。 |
+|MaxResults|Integer|5|本次读取的最大数据记录数量。取值**1**~**100**，参数传入为空时，默认为**20**。 |
 |Acls|Array of GaAcls| |ACL列表。 |
 |AclId|String|nacl-hp34s2h0xx1ht4nwo\*\*\*\*|ACL ID。 |
 |AclName|String|test-acl|ACL名称。 |
-|AddressIPVersion|String|IPv4|ACL IP版本，取值：IPv4。 |
+|AddressIPVersion|String|IPv4|ACL IP版本，取值：**IPv4**。 |
 |AclStatus|String|Available|ACL状态，取值：
 
  -   **Provisioning**：创建中。
