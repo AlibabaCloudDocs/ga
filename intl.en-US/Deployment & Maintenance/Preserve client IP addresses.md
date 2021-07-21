@@ -2,10 +2,7 @@
 
 Global Accelerator \(GA\) supports the client IP address preservation feature. After you enable this feature, you can view preserved client IP addresses on backend servers. This topic describes how to enable client IP address preservation in different scenarios and view preserved client IP addresses on backend servers.
 
--   A listener is created for your GA instance. For more information, see [Add listeners](/intl.en-US/User Guide/Listeners/Add listeners.md).
--   The client IP address preservation feature is available for users whose accounts are added to the whitelist.
-    -   To enable client IP address preservation for an existing GA instance,[submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex). Make sure that you include the ID of the GA instance in the ticket. After your application is approved, you must create a new listener for the GA instance and then enable client IP address preservation.
-    -   To enable client IP address preservation for a new GA instance,[submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).
+A listener is created for your GA instance. For more information, see [Create a listener](/intl.en-US/User Guide/Listeners/Create a listener.md).
 
 ## Background information
 
